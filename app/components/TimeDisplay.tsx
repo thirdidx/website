@@ -27,14 +27,14 @@ export default function TimeDisplay() {
 
   return (
     <div 
-      className="font-mono text-xs uppercase relative w-28 text-center md:text-right cursor-default"
+      className="font-mono text-xs leading-none uppercase relative w-28 text-center md:text-right cursor-default"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       <div className={`transition-all duration-300 ease-in-out ${isHovered ? 'opacity-0 translate-y-1' : 'opacity-100 translate-y-0'}`}>
         {time}
       </div>
-      <div className={`absolute inset-0 transition-all duration-300 ease-in-out ${isHovered ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-1'}`}>
+      <div className={`absolute inset-0 transition-all duration-300 ease-in-out ${isHovered ? 'opacity-100 translate-y-px' : 'opacity-0 -translate-y-1'}`}>
         America/New_York
       </div>
     </div>
