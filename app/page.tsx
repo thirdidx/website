@@ -2,7 +2,7 @@ import TimeDisplay from "./components/TimeDisplay"
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gray-950 text-white p-24 flex flex-col">
+    <div className="min-h-screen bg-gray-950 text-white p-12 xl:p-24 flex flex-col">
       <header className="flex flex-col md:flex-row gap-8 justify-between items-center">
         <svg width="34" height="24" viewBox="0 0 34 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M10.5181 16.8928C10.5181 16.0801 11.2036 15.4255 12.0206 15.4255C12.8377 15.4255 13.4958 16.0801 13.4958 16.8928C13.4958 17.7055 12.8377 18.3601 12.0206 18.3601C11.2036 18.3601 10.5181 17.7055 10.5181 16.8928Z" fill="#FBFAFA" fillOpacity="0.8"/>
@@ -20,17 +20,17 @@ export default function Home() {
       </header>
       <main className="flex-1 flex flex-col gap-4 justify-end">
         <section className="py-12 space-y-8">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
-            <div className="md:col-span-4">
-              <h2 className="text-2xl md:text-7xl lg:text-8xl text-gray-200 !leading-none text-balance max-w-2xl uppercase">
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-12 gap-12 items-end">
+            <div className="xl:col-span-5 flex flex-col justify-end">
+              <h2 className="text-2xl md:text-6xl xl:text-8xl text-gray-200 !leading-none lg:text-balance lg:max-w-2xl uppercase">
                 Digital systems architecture.
               </h2>
             </div>
-            <div className="md:col-span-4 md:col-start-8 flex flex-col gap-y-24 md:gap-y-48">
+            <div className="xl:col-span-5 xl:col-start-8 flex flex-col gap-y-12 md:gap-y-24 lg:gap-y-48 xl:gap-y-64">
               <div className="text-lg text-gray-200 !leading-none text-balance max-w-sm uppercase">
                 Engineering with design intent. 
               </div>
-              <p className="text-lg text-gray-200 text-balance max-w-xl -translate-y-1">
+              <p className="text-lg text-gray-200 text-balance max-w-xl -translate-y-2">
                 We build web applications for creative platforms, publishing systems, and financial interfaces—technical solutions that anticipate complexity while solving present needs.
               </p>
             </div>
