@@ -23,8 +23,8 @@ const spaceGrotesk = Space_Grotesk({
 
 
 export const metadata: Metadata = {
-  title: "Third Index",
-  description: "We develop web applications that navigate complexity with clarity."
+  title: "thirdindex.co",
+  description: "Third Index builds sophisticated web applications with animated interfaces. Expert digital product engineering and technical consulting for publishing, creative, and financial sectors"
 }
 
 export default function RootLayout({
