@@ -45,9 +45,8 @@ export default function Home() {
               </h2>
             </div>
             <div className="xl:col-span-5 xl:col-start-8">
-              <p className="text-lg text-gray-200 text-balance max-w-xl -translate-y-2">
-                {/* We build web applications for creative platforms, publishing systems, and financial interfaces—technical solutions that anticipate complexity while solving present needs. */}
-                A technology studio crafting web applications with technical depth and animated interfaces. We build custom digital products and provide expert consulting across publishing, creative, and financial sectors.
+              <p className="text-md text-gray-200 tracking-tight text-pretty max-w-lg -translate-y-2">
+                A technology studio creating web applications that balance technical excellence with considered design. We build custom digital products and provide expert consulting across publishing, SaaS, e-commerce, creative, and decentralized platforms.
               </p>
             </div>
           </div>
