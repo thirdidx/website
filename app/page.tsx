@@ -13,9 +13,11 @@ export default function Home() {
             <path d="M4.3871 1.82727H2.13871V22.1727H4.3871V24H0V0H4.3871V1.82727Z" fill="currentColor" fillOpacity="0.8"/>
           </svg>
         </div>
-        <div className="flex md:order-none order-last md:flex-row flex-col gap-8 md:items-center">
-          <TimeDisplay />
-          <a href="mailto:info@thirdindex.co" className="px-4 py-2.5 bg-white/5 hover:bg-white text-gray-200 hover:text-gray-900 rounded-full transition-colors text-xs uppercase font-mono">
+        <div className="flex gap-4 items-center">
+          <div className="hidden md:block">
+            <TimeDisplay />
+          </div>
+          <a href="mailto:info@thirdindex.co" className="px-4 py-2.5 bg-white/5 hover:bg-white text-gray-200 hover:text-gray-900 rounded-full transition-colors text-xs uppercase font-mono whitespace-nowrap">
             Get in touch
           </a>
         </div>
