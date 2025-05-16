@@ -1,17 +1,43 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-:root {
-  --foreground-rgb: 255, 255, 255;
-  --background-rgb: 23, 23, 23;
+  /* hsl(227, 95%, 49%) */
+  /* hsl(200, 33%, 94%) */
+  /* hsl(240, 15%, 4%) */
+
+
+@theme inline {
+  /* Colors */
+  --color-background: hsl(240, 15%, 4%);
+  --color-foreground: hsl(200, 33%, 94%);
+  --color-primary: 227, 95%, 49%;
+  --color-secondary: #ff4081;
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+  
+  /* Typography */
+  --font-body: var(--font-instrument-serif);
+  --font-mono: var(--font-inconsolata);
+
+  /* Spacing */
+  --spacing-unit: 0.25rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  
+  /* Breakpoints */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  
+  /* Border radius */
+  --radius-sm: 0.125rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-full: 9999px;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-rgb));
-}
-
+/* You can also add custom utilities */
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -19,65 +45,10 @@ body {
 }
 
 @layer base {
-  :root  {
-    --background: 240 0% 95%;
-    --foreground: 240 0% 0%;
-    --card: 240 0% 90%;
-    --card-foreground: 240 0% 10%;
-    --popover: 240 0% 95%;
-    --popover-foreground: 240 95% 0%;
-    --primary: 240 10% 3.9%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 240 10% 70%;
-    --secondary-foreground: 0 0% 0%;
-    --muted: 202 10% 85%;
-    --muted-foreground: 240 0% 35%;
-    --accent: 202 10% 80%;
-    --accent-foreground: 240 0% 10%;
-    --destructive: 0 50% 30%;
-    --destructive-foreground: 240 0% 90%;
-    --border: 240 20% 50%;
-    --input: 240 20% 18%;
-    --ring: 240 10% 3.9%;
-    --radius: 0rem;
-  }
-  .dark  {
-    --background: 240 10% 5%;
-    --foreground: 240 0% 90%;
-    --card: 240 0% 0%;
-    --card-foreground: 240 0% 90%;
-    --popover: 240 10% 5%;
-    --popover-foreground: 240 0% 90%;
-    --primary: 240 10% 3.9%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 240 10% 10%;
-    --secondary-foreground: 0 0% 100%;
-    --muted: 202 10% 15%;
-    --muted-foreground: 240 0% 60%;
-    --accent: 202 10% 15%;
-    --accent-foreground: 240 0% 90%;
-    --destructive: 0 50% 30%;
-    --destructive-foreground: 240 0% 90%;
-    --border: 240 20% 18%;
-    --input: 240 20% 18%;
-    --ring: 240 10% 3.9%;
-    --radius: 0rem;
-  }
-}
-
-@layer base {
-  * {
-    @apply border-border;
-  }
   body {
-    @apply bg-neutral-900 text-white font-mono;
+    @apply font-body text-foreground bg-background;
   }
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @apply font-semibold tracking-tight font-display;
+
+  h1, h2, h3, h4, h5, h6 {
   }
 }
