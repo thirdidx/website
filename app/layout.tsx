@@ -18,8 +18,8 @@ const inconsolata = Inconsolata({
 })
 
 export const metadata: Metadata = {
-  title: "Third Index",
-  description: "A technology studio building web applications with technical precision &amp; design intent."
+  title: "kolumn",
+  description: "a technology studio building web applications with technical precision &amp; design intent."
 }
 
 export default function RootLayout({
