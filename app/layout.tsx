@@ -1,35 +1,32 @@
-import type React from "react"
-import "./globals.css"
-import type { Metadata } from "next"
-import {  Inconsolata, Instrument_Serif } from "next/font/google"
+import type React from 'react';
+import './globals.css';
+import type { Metadata } from 'next';
+import { Inconsolata, Inter } from 'next/font/google';
 
-const instrumentSerif = Instrument_Serif({
-  subsets: ["latin"],
-  weight: ["400"],
-  variable: "--font-instrument-serif",
-  display: "swap",
-})
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-inter',
+  display: 'swap',
+});
 
 const inconsolata = Inconsolata({
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  variable: "--font-inconsolata",
-  display: "swap",
-})
+  subsets: ['latin'],
+  weight: ['400', '500', '600'],
+  variable: '--font-inconsolata',
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
-  title: "kolumn",
-  description: "a technology studio building web applications with technical precision &amp; design intent."
-}
+  title: 'thirdindex',
+  description:
+    'Tech consultancy and digital studio building custom web applications with engineering rigor and thoughtful design',
+};
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${instrumentSerif.variable} ${inconsolata.variable}`}>
+    <html lang="en" className={`${inter.variable} ${inconsolata.variable}`}>
       <body>{children}</body>
     </html>
-  )
+  );
 }

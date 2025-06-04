@@ -1,9 +1,8 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
-  /* hsl(227, 95%, 49%) */
-  /* hsl(200, 33%, 94%) */
-  /* hsl(240, 15%, 4%) */
-
+/* hsl(227, 95%, 49%) */
+/* hsl(200, 33%, 94%) */
+/* hsl(240, 15%, 4%) */
 
 @theme inline {
   /* Colors */
@@ -14,22 +13,22 @@
   --color-success: #10b981;
   --color-warning: #f59e0b;
   --color-error: #ef4444;
-  
+
   /* Typography */
-  --font-body: var(--font-instrument-serif);
+  --font-body: var(--font-inter);
   --font-mono: var(--font-inconsolata);
 
   /* Spacing */
   --spacing-unit: 0.25rem;
   --spacing-xl: 2rem;
   --spacing-2xl: 3rem;
-  
+
   /* Breakpoints */
   --breakpoint-sm: 640px;
   --breakpoint-md: 768px;
   --breakpoint-lg: 1024px;
   --breakpoint-xl: 1280px;
-  
+
   /* Border radius */
   --radius-sm: 0.125rem;
   --radius-md: 0.375rem;
@@ -46,9 +45,19 @@
 
 @layer base {
   body {
-    @apply font-body text-foreground bg-background;
+    @apply text-foreground bg-background font-mono;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-body font-bold tracking-tight;
+  }
+
+  a {
+    @apply hover:text-foreground/95 text-foreground/70 transition-colors;
   }
 }
