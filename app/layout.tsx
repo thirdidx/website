@@ -21,6 +21,20 @@ export const metadata: Metadata = {
   title: 'thirdindex',
   description:
     'Tech consultancy and digital studio building custom web applications with engineering rigor and thoughtful design',
+  icons: [
+    {
+      rel: 'icon',
+      type: 'image/x-icon',
+      url: '/favicon.png',
+      media: '(prefers-color-scheme: light)',
+    },
+    {
+      rel: 'icon',
+      type: 'image/png',
+      url: '/favicon-dark.png',
+      media: '(prefers-color-scheme: dark)',
+    },
+  ],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
