@@ -6,9 +6,9 @@
 
 @theme inline {
   /* Colors */
-  --color-background: hsl(240, 15%, 4%);
-  --color-foreground: hsl(200, 33%, 94%);
-  --color-primary: 227, 95%, 49%;
+  --color-background: hsl(200, 33%, 94%);
+  --color-foreground: hsl(240, 15%, 4%);
+  --color-primary: hsl(227, 95%, 49%);
   --color-secondary: #ff4081;
   --color-success: #10b981;
   --color-warning: #f59e0b;
@@ -36,16 +36,30 @@
   --radius-full: 9999px;
 }
 
+@keyframes marquee {
+  0% {
+    transform: translateY(200%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
 /* You can also add custom utilities */
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+
+  .animate-marquee {
+    animation: marquee 30s linear infinite;
+    will-change: transform;
+  }
 }
 
 @layer base {
   body {
-    @apply text-foreground bg-background font-mono;
+    @apply text-foreground font-body bg-background w-dvw overflow-x-hidden;
   }
 
   h1,
@@ -54,7 +68,7 @@
   h4,
   h5,
   h6 {
-    @apply font-body font-bold tracking-tight;
+    @apply font-bold tracking-tighter;
   }
 
   a {

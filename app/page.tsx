@@ -2,9 +2,9 @@ import TimeDisplay from './components/TimeDisplay';
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col p-4 md:p-8">
-      <header className="flex items-center justify-between gap-8">
-        <div className="flex items-center gap-2">
+    <div className="flex min-h-screen flex-col overflow-x-hidden p-4 md:p-8">
+      <header className="grid grid-cols-8 gap-4">
+        <div className="col-span-2 flex items-start gap-2">
           <svg
             width="35"
             height="25"
@@ -26,36 +26,75 @@ export default function Home() {
             />
           </svg>
         </div>
-        <div className="flex items-center gap-4">
-          <div className="hidden md:block">
-            <TimeDisplay />
+        <div className="col-span-6 flex flex-col justify-end gap-8 text-right md:col-span-4 md:grid md:grid-cols-2 md:flex-row md:justify-start md:gap-4 md:text-left">
+          <div className="flex flex-col gap-2">
+            <div className="font-mono text-xs font-normal tracking-wide uppercase">Links</div>
+            <div className="flex flex-col gap-1">
+              <a className="font-sans text-xs font-bold uppercase" href="mailto:info@thirdindex.co">
+                Email
+              </a>
+              {/* <a className="font-sans text-xs font-bold" href="mailto:info@thirdindex.co">
+                Start a project &rarr;
+              </a> */}
+              <a
+                className="group text-primary hover:text-primary/80 font-sans text-xs font-bold uppercase transition-colors"
+                href="https://cal.com/thirdindex/15min"
+              >
+                Book a call{' '}
+                <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
+                  &rarr;
+                </span>
+              </a>
+            </div>
           </div>
-          <a
+          <div className="order-first flex flex-col md:order-last">
+            <div className="font-mono text-xs font-normal tracking-wide uppercase">
+              independent practice of
+            </div>
+            <div>
+              <a className="font-sans text-xs font-bold uppercase" href="https://hael.cc">
+                michael ciccarelli
+              </a>
+            </div>
+          </div>
+        </div>
+        <div className="col-span-2 hidden items-start justify-end md:flex">
+          <TimeDisplay />
+          {/* <a
             href="mailto:info@thirdindex.co"
             className="rounded-full bg-white/5 px-4 py-2.5 font-mono text-xs whitespace-nowrap text-gray-200 uppercase transition-colors hover:bg-white hover:text-gray-900"
           >
             Get in touch
-          </a>
+          </a> */}
         </div>
+
+        <div className="col-span-2">&nbsp;</div>
       </header>
       <main className="flex flex-1 flex-col justify-center gap-4">
-        <div className="grid grid-cols-1 gap-4 xl:grid-cols-6">
-          <div className="flex flex-col gap-4 xl:col-span-3 xl:col-start-2">
-            <h2 className="text-balace text-xl md:text-3xl lg:text-4xl">
-              we build thoughtful web applications with a focus on clean design and solid
-              engineering. our work spans publishing, e-commerce, creative projects, and
-              decentralized platforms.
+        <div className="text-foreground font-body w-full text-2xl leading-none font-bold tracking-tighter uppercase md:text-center md:text-[14dvw] xl:text-[17dvw]">
+          thirdindex
+        </div>
+        <div className="grid grid-cols-8 gap-4">
+          <div className="col-span-8 flex flex-col gap-4 xl:col-span-6 xl:col-start-2">
+            <h2 className="text-xl/tight font-bold text-balance lg:indent-32 lg:text-5xl/[1.05] lg:font-extrabold">
+              building thoughtful web applications with a focus on clean design and solid
+              engineering.
+              <span className="lg:hidden">
+                our work spans publishing, commerce, creative projects, and decentralized platforms.
+              </span>
             </h2>
-            <p className="text-sm">
-              <a href="https://cal.com/thirdindex/15min">Start a project</a> or get in touch:{' '}
-              <a href="mailto:info@thirdindex.co">info@thirdindex.co</a>
-            </p>
+            <h2 className="hidden text-xl leading-none lg:flex">
+              our work spans publishing, commerce, creative projects, and decentralized platforms.
+            </h2>
           </div>
         </div>
       </main>
-      {/* <footer className="border-t border-neutral-700 py-12">
-        <p className="font-mono text-xs text-neutral-400">© 2025 kolumn LLC. Brooklyn, NY.</p>
-      </footer> */}
+      <footer className="flex flex-col gap-2 md:flex-row md:justify-between">
+        <p className="font-mono text-xs text-neutral-400">© {new Date().getFullYear()} thirdindex llc</p>
+        <p className="font-mono text-xs text-neutral-400">
+          systems that think. interfaces that breathe. code that lasts.
+        </p>
+      </footer>
     </div>
   );
 }
