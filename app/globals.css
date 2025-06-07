@@ -6,8 +6,8 @@
 
 @theme inline {
   /* Colors */
-  --color-background: hsl(200, 33%, 94%);
-  --color-foreground: hsl(240, 15%, 4%);
+  --color-background: hsl(240, 15%, 4%);
+  --color-foreground: hsl(200, 33%, 94%);
   --color-primary: hsl(227, 95%, 49%);
   --color-secondary: #ff4081;
   --color-success: #10b981;
@@ -72,6 +72,6 @@
   }
 
   a {
-    @apply hover:text-foreground/95 text-foreground/70 transition-colors;
+    @apply hover:text-foreground/95 transition-colors;
   }
 }

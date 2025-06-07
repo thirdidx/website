@@ -1,9 +1,9 @@
 export default function Wordmark() {
   return (
     <svg
-      className="mx-auto w-5/6"
       viewBox="0 0 412 75"
       fill="none"
+      preserveAspectRatio="xMidYMid meet"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path

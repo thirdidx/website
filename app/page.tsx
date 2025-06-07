@@ -4,77 +4,93 @@ import Wordmark from './components/Wordmark';
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col p-4 md:p-8">
-      <header className="grid grid-cols-8 gap-4">
-        <div className="col-span-2">
-          <Logo />
-        </div>
-        <div className="col-span-6 -translate-y-1 md:col-span-4 md:translate-y-0">
-          <div className="flex flex-col gap-8 text-right md:grid md:grid-cols-2 md:gap-4 md:text-left">
-            <nav className="flex flex-col md:gap-2">
-              <span className="font-mono text-xs tracking-wide uppercase">Links</span>
-              <div className="flex flex-col gap-1">
-                <a
-                  className="hover:text-primary/80 font-sans text-xs font-bold uppercase transition-colors"
-                  href="mailto:info@thirdindex.co"
-                >
-                  Email
-                </a>
-                <a
-                  className="group text-primary hover:text-primary/80 font-sans text-xs font-bold uppercase transition-colors"
-                  href="https://cal.com/thirdindex/15min"
-                >
-                  Book a call{' '}
-                  <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
-                    &rarr;
-                  </span>
-                </a>
-              </div>
-            </nav>
-            <div className="order-first flex flex-col md:order-last md:gap-2">
-              <span className="font-mono text-xs tracking-wide uppercase">
-                independent practice of
-              </span>
-              <a
-                className="hover:text-primary/80 font-sans text-xs font-bold uppercase transition-colors"
-                href="https://hael.cc"
-              >
-                michael ciccarelli
-              </a>
-            </div>
+    <div
+      className="bg-opacity-90 bg-foreground flex min-h-screen flex-col bg-cover bg-center bg-blend-darken"
+      style={{
+        backgroundImage: 'url(/bg.jpg)',
+      }}
+    >
+      <header className="grid grid-cols-12 gap-2 p-4 py-8">
+        <div className="text-foreground col-span-6">
+          <div className="w-[32px] translate-y-px mix-blend-difference">
+            <Logo />
           </div>
         </div>
-        <div className="col-span-2 hidden justify-end md:flex">
-          <TimeDisplay />
+        <div className="col-span-6 justify-end justify-self-end">
+          {/* <nav className="grid grid-cols-3 gap-2 font-sans text-xs uppercase">
+            <div>
+              <a href="#">About</a>
+            </div>
+            <div>
+              <a href="#">Services</a>
+            </div>
+            <div>
+              <a href="#">Contact</a>
+            </div>
+          </nav> */}
+          <a
+            href="https://cal.com/thirdindex/15min"
+            className="border-primary/20 bg-background/20 hover:bg-primary flex items-center gap-2 rounded-full px-3 py-1.5 font-mono text-[10px] tracking-wide text-white uppercase transition-all duration-300"
+          >
+            <span className="mix-blend-screen">Book a call</span>
+          </a>
         </div>
       </header>
-      <main className="flex flex-1 flex-col justify-center gap-8 md:gap-16">
-        {/* <h1 className="text-center text-2xl font-bold tracking-tighter md:text-[14dvw] xl:text-[17dvw] uppercase">
-          thirdindex
-        </h1> */}
-        <Wordmark />
-
-        <div className="grid grid-cols-8 gap-4">
-          <div className="col-span-8 flex flex-col gap-4 xl:col-span-6 xl:col-start-2">
-            <h2 className="text-xl leading-tight font-bold text-balance lg:indent-32 lg:text-5xl lg:leading-[1.05] lg:font-extrabold">
-              we make thoughtful web apps with clean design and solid engineering
-              <span className="lg:hidden">
-                . projects span publishing, commerce, creative tools, and decentralized platforms.
-              </span>
-            </h2>
-            <h2 className="hidden text-xl leading-none lg:block">
-              projects span publishing, commerce, creative tools, and decentralized platforms.
-            </h2>
+      <main className="flex flex-1 flex-col items-center pt-24 md:justify-end md:pb-52">
+        <div className="flex flex-col gap-y-12 px-4 md:grid md:grid-cols-12 md:gap-4">
+          <div className="col-span-12 mix-blend-difference md:col-span-6">
+            {/* <h1 className="font-sans text-xl font-bold tracking-tight lowercase md:text-6xl xl:text-9xl">
+              ThirdIndex
+            </h1> */}
+            <Wordmark />
+          </div>
+          <div className="col-span-12 flex flex-col place-items-baseline gap-2 md:col-span-4 md:col-start-10 md:-translate-y-2 md:justify-end">
+            <div className="bg-primary h-2 w-2">&nbsp;</div>
+            <p className="text-bal text-sm leading-tight font-medium tracking-tight mix-blend-difference">
+              we build thoughtful web applications with a focus on clean design and solid
+              engineering. our work spans publishing, commerce, creative projects, and decentralized
+              platforms.
+            </p>
           </div>
         </div>
+
+        {/* <div className="flex w-full flex-col items-center justify-center gap-8 text-white mix-blend-difference md:gap-16">
+          <h2 className="text-xl leading-tight font-bold text-balance lg:text-5xl lg:leading-[1.05] lg:font-extrabold">
+            precision meets imagination
+          </h2>
+          <h2 className="text-xl leading-tight font-bold text-balance lg:text-5xl lg:leading-[1.05] lg:font-extrabold">
+            we approach every project as a problem worth solving well. clean architecture.
+            intentional design. no compromises on quality.
+          </h2>
+          <h2 className="text-xl leading-tight font-bold text-balance lg:text-5xl lg:leading-[1.05] lg:font-extrabold">
+            what we build:
+          </h2>
+          <ul className="text-center">
+            <li>publishing platforms that reshape how content lives online</li>
+            <li>e-commerce experiences that convert visitors into believers</li>
+            <li>creative projects that push boundaries</li>
+            <li>decentralized systems built for tomorrow</li>
+          </ul>
+        </div> */}
       </main>
-      <footer className="flex flex-col gap-2 md:flex-row md:justify-between">
-        <p className="font-mono text-xs text-neutral-400">
-          © {new Date().getFullYear()} ThirdIndex, LLC
-        </p>
-        <p className="font-mono text-xs text-neutral-400">
-          systems that think. interfaces that breathe. code that lasts.
-        </p>
+      <footer className="text-foreground md:items-center p-4 font-mono text-xs uppercase md:grid md:grid-cols-12 md:gap-4 flex flex-col">
+        <div className="order-last md:order-first md:col-span-3">© {new Date().getFullYear()}</div>
+
+        <div className="md:col-span-3">
+          digital studio of{' '}
+          <a className="hover:text-primary/80 transition-colors" href="https://hael.cc">
+            michael ciccarelli
+          </a>
+        </div>
+        <div className="md:col-span-4">
+          E:{' '}
+          <a className="hover:text-primary/80 transition-colors" href="mailto:info@thirdindex.co">
+            info@thirdindex.co
+          </a>
+        </div>
+        <div className="flex items-center gap-2 md:col-span-2 md:justify-end">
+          <TimeDisplay />
+        </div>
       </footer>
     </div>
   );
