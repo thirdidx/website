@@ -12,7 +12,7 @@ export default function TimeDisplay() {
       const estTime = new Date(now.toLocaleString('en-US', { timeZone: 'America/New_York' }));
       const hours = estTime.getHours().toString().padStart(2, '0');
       const minutes = estTime.getMinutes().toString().padStart(2, '0');
-      setTime(`${hours}:${minutes} EST`);
+      setTime(`${hours}:${minutes}`);
     };
 
     // Update immediately
@@ -26,17 +26,21 @@ export default function TimeDisplay() {
   }, []);
 
   return (
-    <div 
-      className="font-mono text-xs leading-none uppercase relative w-28 text-center md:text-right cursor-default"
+    <div
+      className="justify-end relative flex w-28 cursor-default items-center text-center text-xs leading-none lowercase md:text-right -translate-y-px"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className={`transition-all duration-300 ease-in-out ${isHovered ? 'opacity-0 translate-y-1' : 'opacity-100 translate-y-0'}`}>
+      <div
+        className={`transition-all duration-300 ease-in-out ${isHovered ? 'translate-y-1 opacity-0' : 'translate-y-0 opacity-100'}`}
+      >
         {time}
       </div>
-      <div className={`absolute inset-0 transition-all duration-300 ease-in-out ${isHovered ? 'opacity-100 translate-y-px' : 'opacity-0 -translate-y-1'}`}>
+      <div
+        className={`absolute inset-0 transition-all duration-300 ease-in-out ${isHovered ? 'translate-y-px opacity-100' : '-translate-y-1 opacity-0'}`}
+      >
         America/New_York
       </div>
     </div>
   );
-} 
+}
