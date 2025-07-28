@@ -21,7 +21,7 @@ export default function Hero() {
         sizes="100vw"
         className="absolute inset-0 z-[1] h-full w-full object-cover mix-blend-lighten"
       />
-      <div className="container mx-auto grid grid-cols-12 gap-4 px-4 pb-[8dvh] z-[10]">
+      <div className="z-[10] container mx-auto grid grid-cols-12 gap-4 px-4 pb-[8dvh]">
         <div className="col-span-12 flex flex-col justify-end bg-transparent md:col-span-4">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -39,10 +39,10 @@ export default function Hero() {
             />
           </svg>
         </div>
-        <div className="col-span-12 flex flex-col justify-end gap-2 md:col-span-4 md:col-start-8">
+        <div className="col-span-12 flex flex-col justify-end gap-2 md:col-span-2 md:col-start-11">
           <p className="text-balance">
-            We build web applications with clean code and thoughtful design. 
-            From MVPs to full platforms.
+            we build web applications with clean code and thoughtful design. from MVPs to full
+            platforms.
           </p>
         </div>
       </div>

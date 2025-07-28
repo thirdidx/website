@@ -1,6 +1,13 @@
 'use client';
 
 import { useState } from 'react';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select';
 
 interface ProjectInquiryFormProps {
   variant?: 'default' | 'dialog';
@@ -25,10 +32,17 @@ export default function ProjectInquiryForm({ variant = 'default' }: ProjectInqui
     console.log('Project inquiry submitted:', formData);
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSelectChange = (name: string, value: string) => {
+    setFormData({
+      ...formData,
+      [name]: value
     });
   };
 
@@ -104,48 +118,50 @@ export default function ProjectInquiryForm({ variant = 'default' }: ProjectInqui
       {/* Project Details */}
       <div className="grid gap-12 md:grid-cols-2">
         <div className="space-y-2">
-          <label htmlFor="projectType" className="block text-sm font-mono text-muted-foreground">
+          <label className="block text-sm font-mono text-muted-foreground">
             Project Type
           </label>
-          <select
-            id="projectType"
-            name="projectType"
+          <Select
             value={formData.projectType}
-            onChange={handleChange}
+            onValueChange={(value) => handleSelectChange('projectType', value)}
             required
-            className="w-full bg-background border-0 border-b border-border px-0 py-4 text-xl text-foreground focus:border-foreground focus:outline-none focus:ring-0 transition-colors"
           >
-            <option value="">Select project type</option>
-            <option value="web-app">Web Application</option>
-            <option value="saas">SaaS Platform</option>
-            <option value="ecommerce">E-commerce Site</option>
-            <option value="marketing">Marketing Website</option>
-            <option value="mobile">Mobile App</option>
-            <option value="blockchain">Web3/Blockchain</option>
-            <option value="other">Other</option>
-          </select>
+            <SelectTrigger className="w-full bg-transparent border-0 border-b border-border px-0 py-4 text-xl text-foreground focus:border-foreground focus:ring-0 rounded-none">
+              <SelectValue placeholder="Select project type" />
+            </SelectTrigger>
+            <SelectContent className="bg-background border-border text-foreground">
+              <SelectItem value="web-app" className="text-lg focus:bg-muted focus:text-foreground">Web Application</SelectItem>
+              <SelectItem value="saas" className="text-lg focus:bg-muted focus:text-foreground">SaaS Platform</SelectItem>
+              <SelectItem value="ecommerce" className="text-lg focus:bg-muted focus:text-foreground">E-commerce Site</SelectItem>
+              <SelectItem value="marketing" className="text-lg focus:bg-muted focus:text-foreground">Marketing Website</SelectItem>
+              <SelectItem value="mobile" className="text-lg focus:bg-muted focus:text-foreground">Mobile App</SelectItem>
+              <SelectItem value="blockchain" className="text-lg focus:bg-muted focus:text-foreground">Web3/Blockchain</SelectItem>
+              <SelectItem value="other" className="text-lg focus:bg-muted focus:text-foreground">Other</SelectItem>
+            </SelectContent>
+          </Select>
         </div>
 
         <div className="space-y-2">
-          <label htmlFor="budget" className="block text-sm font-mono text-muted-foreground">
+          <label className="block text-sm font-mono text-muted-foreground">
             Budget Range
           </label>
-          <select
-            id="budget"
-            name="budget"
+          <Select
             value={formData.budget}
-            onChange={handleChange}
+            onValueChange={(value) => handleSelectChange('budget', value)}
             required
-            className="w-full bg-background border-0 border-b border-border px-0 py-4 text-xl text-foreground focus:border-foreground focus:outline-none focus:ring-0 transition-colors"
           >
-            <option value="">Select budget range</option>
-            <option value="under-10k">Under $10,000</option>
-            <option value="10k-25k">$10,000 - $25,000</option>
-            <option value="25k-50k">$25,000 - $50,000</option>
-            <option value="50k-100k">$50,000 - $100,000</option>
-            <option value="100k-plus">$100,000+</option>
-            <option value="equity">Equity Partnership</option>
-          </select>
+            <SelectTrigger className="w-full bg-transparent border-0 border-b border-border px-0 py-4 text-xl text-foreground focus:border-foreground focus:ring-0 rounded-none">
+              <SelectValue placeholder="Select budget range" />
+            </SelectTrigger>
+            <SelectContent className="bg-background border-border text-foreground">
+              <SelectItem value="under-10k" className="text-lg focus:bg-muted focus:text-foreground">Under $10,000</SelectItem>
+              <SelectItem value="10k-25k" className="text-lg focus:bg-muted focus:text-foreground">$10,000 - $25,000</SelectItem>
+              <SelectItem value="25k-50k" className="text-lg focus:bg-muted focus:text-foreground">$25,000 - $50,000</SelectItem>
+              <SelectItem value="50k-100k" className="text-lg focus:bg-muted focus:text-foreground">$50,000 - $100,000</SelectItem>
+              <SelectItem value="100k-plus" className="text-lg focus:bg-muted focus:text-foreground">$100,000+</SelectItem>
+              <SelectItem value="equity" className="text-lg focus:bg-muted focus:text-foreground">Equity Partnership</SelectItem>
+            </SelectContent>
+          </Select>
         </div>
       </div>
 

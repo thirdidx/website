@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div className="text-foreground bg-background relative flex min-h-screen flex-col">
       <Navbar />
-      
+
       {/* Global Contact Dialog */}
       <ContactDialog showTrigger={false} />
 
@@ -22,7 +22,6 @@ export default function Home() {
         <Process />
         <Pricing />
         <FAQ />
-        
         <CTA />
       </main>
 

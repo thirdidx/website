@@ -5,11 +5,16 @@ export default function Pricing() {
     <section id="pricing" className="flex min-h-screen items-center py-20 md:py-32">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 gap-4 md:grid-cols-12">
-          <div className="col-span-12 md:col-span-4">
-            <h2 className="mb-6 text-2xl font-bold">Pricing & Engagement</h2>
-            <p className="text-muted-foreground text-sm leading-relaxed">
-              Have an idea? Let's scope it out.
-            </p>
+          <div className="col-span-12 flex flex-col gap-y-4 md:col-span-4">
+            <div>
+              <h2 className="mb-6 text-2xl font-bold">Pricing & Engagement</h2>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Have an idea? Let's scope it out.
+              </p>
+            </div>
+            <a href="#contact" className="text-xs font-semibold uppercase">
+              Get in Touch
+            </a>
           </div>
 
           {/* Bento-style pricing grid */}
@@ -44,8 +49,7 @@ export default function Pricing() {
                   <h3 className="mb-2 font-semibold">Monthly Retainer</h3>
                   <div className="mb-4 text-2xl font-bold">$8,500/month</div>
                   <p className="text-muted-foreground mb-4 text-xs">
-                    {/* For startups that need consistent velocity and technical leadership. */}
-                    Ideal for teams post-MVP or with growing tech needs.
+                    Ongoing technical partnership for growing teams
                   </p>
                   <ul className="text-muted-foreground flex-1 space-y-2 text-sm">
                     <li className="flex items-center gap-2">

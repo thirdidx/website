@@ -13,11 +13,11 @@ export default function About() {
                 <div className="mb-6 font-mono text-xs">what we do</div>
                 <div className="flex flex-col gap-6 text-balance">
                   <p className="text-lg md:text-2xl">
-                    We turn ideas into working products people want to use.
+                    we turn ideas into working products people want to use.
                   </p>
                   <p className="md:max-w-lg">
-                    full-stack development with design that works. we build the foundation right so
-                    your product can grow without breaking.
+                    full-stack development, thoughtfully designed. we build solid foundations so
+                    your product can scale without breaking.
                   </p>
                 </div>
               </div>
