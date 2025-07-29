@@ -55,7 +55,7 @@ export default function ContactDialog({ showTrigger = true }: ContactDialogProps
         {/* CLI-style header bar */}
         <div className="border-foreground/20 flex items-center justify-between border-b px-6 py-4">
           <DialogTitle className="font-mono text-sm font-bold uppercase">Get in touch</DialogTitle>
-          <div className='flex items-center gap-4'>
+          <div className="flex items-center gap-4">
             {/* Tab Navigation */}
             <div className="flex gap-6 font-mono text-xs uppercase">
               <button
@@ -66,7 +66,7 @@ export default function ContactDialog({ showTrigger = true }: ContactDialogProps
                     : 'text-muted-foreground hover:text-foreground'
                 }`}
               >
-                Contact
+                General
               </button>
               <button
                 onClick={() => setActiveTab('project')}
@@ -76,7 +76,7 @@ export default function ContactDialog({ showTrigger = true }: ContactDialogProps
                     : 'text-muted-foreground hover:text-foreground'
                 }`}
               >
-                Project
+                Project inquiry
               </button>
             </div>
 

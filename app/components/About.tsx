@@ -24,7 +24,14 @@ export default function About() {
 
               {/* Work sample 1 - top right */}
               <div className="col-span-2 md:col-span-1">
-                <WorkSampleCard size="small" />
+                <WorkSampleCard
+                  size="small"
+                  imageSrc="/projects/kelvon.png"
+                  alt="Kelvon project"
+                  projectName="Kelvon Agee"
+                  projectDescription="photographer site. next.js/cloudinary, tailwind css & motion"
+                  liveUrl="https://kelvonagee.com"
+                />
               </div>
 
               {/* Services list - spans 2 columns */}
@@ -42,11 +49,23 @@ export default function About() {
 
               {/* Work samples 2 & 3 - bottom right */}
               <div className="col-span-2 md:col-span-1">
-                <WorkSampleCard size="small" />
+                <WorkSampleCard
+                  size="small"
+                  imageSrc="/projects/one-of.png"
+                  alt="One Of project"
+                  projectName="ONE/OF"
+                  projectDescription="ecommerce site. next.js, shopify & sanity"
+                  liveUrl="https://shoponeof.com"
+                />
               </div>
 
               <div className="col-span-2 md:col-span-1">
-                <WorkSampleCard size="small" />
+                <WorkSampleCard
+                  size="small"
+                  alt="Add your project"
+                  projectName="Your Project?"
+                  liveUrl="#contact"
+                />
               </div>
             </div>
           </div>
@@ -55,11 +74,18 @@ export default function About() {
           <div className="col-span-12 md:col-span-4">
             <div className="flex flex-col gap-6">
               {/* Work sample 4 */}
-              <WorkSampleCard size="large" />
+              <WorkSampleCard
+                size="large"
+                imageSrc="/projects/the-bar.png"
+                alt="The Bar"
+                projectName="The Bar"
+                projectDescription="portfolio site for amazon (xcm). next.js, sanity, tailwind css & motion"
+                liveUrl="https://amazonthe.bar"
+              />
 
-              <div>
+              {/* <div>
                 <div className="mb-6 font-mono text-xs">see more projects</div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

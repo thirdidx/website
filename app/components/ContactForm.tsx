@@ -14,10 +14,38 @@ export default function ContactForm({ variant = 'default' }: ContactFormProps) {
     company: '',
     message: '',
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Contact form submitted:', formData);
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          type: 'contact',
+          ...formData,
+        }),
+      });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', company: '', message: '' });
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -37,8 +65,8 @@ export default function ContactForm({ variant = 'default' }: ContactFormProps) {
     : 'block text-sm font-mono text-muted-foreground';
 
   const buttonClasses = isDialog
-    ? 'w-full bg-white text-[#0066ff] py-6 px-12 rounded-md text-xl font-medium hover:bg-blue-50 transition-colors'
-    : 'w-full bg-foreground text-background py-4 px-8 rounded-md text-lg font-medium hover:bg-foreground/90 transition-colors';
+    ? 'w-full bg-white text-[#0066ff] py-6 px-12 rounded-md text-xl font-medium hover:bg-blue-50 transition-colors disabled:opacity-50'
+    : 'w-full bg-foreground text-background py-4 px-8 rounded-md text-lg font-medium hover:bg-foreground/90 transition-colors disabled:opacity-50';
 
   return (
     <form
@@ -111,9 +139,15 @@ export default function ContactForm({ variant = 'default' }: ContactFormProps) {
       </div>
 
       <div className={isDialog ? 'pt-8' : 'pt-8'}>
-        <button type="submit" className={buttonClasses}>
-          Send Message
+        <button type="submit" className={buttonClasses} disabled={isSubmitting}>
+          {isSubmitting ? 'Sending...' : 'Send Message'}
         </button>
+        {submitStatus === 'success' && (
+          <p className="mt-2 text-sm text-green-600">Message sent successfully!</p>
+        )}
+        {submitStatus === 'error' && (
+          <p className="mt-2 text-sm text-red-600">Failed to send message. Please try again.</p>
+        )}
       </div>
     </form>
   );
