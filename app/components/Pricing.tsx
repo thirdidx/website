@@ -20,7 +20,21 @@ export default function Pricing() {
           {/* Bento-style pricing grid */}
           <div className="col-span-12 md:col-span-8">
             <div className="grid gap-4 md:grid-cols-6 md:grid-rows-3">
-              {/* Monthly Retainer - single plan */}
+              <PricingCard
+                title="Custom Web Apps"
+                price="$10k–$40k+"
+                description="Complete digital product from concept to launch. 6-10 week timeline."
+                features={[
+                  'Modern frontend architecture (Next.js, React)',
+                  'Design-driven user interfaces',
+                  'Dashboard UI & core features',
+                  'User authentication & management',
+                  'Database design & API development',
+                  'Deployment & hosting setup',
+                ]}
+                className="md:col-span-3"
+              />
+
               <div className="group h-full cursor-pointer md:col-span-3 md:row-span-2">
                 <div className="border-foreground/20 bg-muted/5 group-hover:bg-muted/10 relative flex h-full flex-col border p-6 transition-all duration-300">
                   {/* Corner caps that elevate outward on hover */}
@@ -39,100 +53,104 @@ export default function Pricing() {
                   </div>
 
                   {/* Availability indicator */}
-                  {/* <div className="mb-4 flex items-center gap-2">
+                  <div className="mb-4 flex items-center gap-2">
                     <div className="h-2 w-2 rounded-full bg-green-500"></div>
-                    <span className="text-muted-foreground text-xs">
-                      1 of 2 slots available
-                    </span>
-                  </div> */}
+                    <span className="text-muted-foreground text-xs">1 of 2 slots available</span>
+                  </div>
 
-                  <h3 className="mb-2 font-semibold">Monthly Retainer</h3>
-                  <div className="mb-4 text-2xl font-bold">$8,500/month</div>
-                  <p className="text-muted-foreground mb-4 text-xs">
-                    Ongoing technical partnership for growing teams
+                  <h3 className="mb-2 font-semibold">Monthly Development Retainer</h3>
+                  <div className="mb-4 text-2xl font-bold">$5,500/month</div>
+                  <p className="text-muted-foreground mb-4 text-xs text-balance">
+                    For teams needing continuous development support. Many clients start with a
+                    scoped project, then move to a retainer for ongoing growth.
                   </p>
                   <ul className="text-muted-foreground flex-1 space-y-2 text-sm">
                     <li className="flex items-center gap-2">
                       <div className="bg-muted-foreground h-1 w-1 rounded-full"></div>
-                      <span>Feature design & full-stack development</span>
+                      <span>Includes ~25 hours/month of dedicated development</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <div className="bg-muted-foreground h-1 w-1 rounded-full"></div>
-                      <span>UI/UX improvements & maintenance</span>
+                      <span>Feature development & technical improvements</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <div className="bg-muted-foreground h-1 w-1 rounded-full"></div>
-                      <span>Technical strategy & architecture guidance</span>
+                      <span>Design system maintenance & updates</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <div className="bg-muted-foreground h-1 w-1 rounded-full"></div>
-                      <span>Code reviews & performance optimization</span>
+                      <span>Code reviews & architecture guidance</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <div className="bg-muted-foreground h-1 w-1 rounded-full"></div>
-                      <span>Bug fixes & security updates</span>
+                      <span>Performance monitoring & optimization</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <div className="bg-muted-foreground h-1 w-1 rounded-full"></div>
-                      <span>Weekly progress reviews & planning</span>
+                      <span>Security updates & maintenance</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <div className="bg-muted-foreground h-1 w-1 rounded-full"></div>
-                      <span>Priority support & same-day responses</span>
+                      <span>Priority support & weekly planning calls</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <div className="bg-muted-foreground h-1 w-1 rounded-full"></div>
+                      <span>Perfect for post-launch iteration and growth</span>
                     </li>
                   </ul>
                 </div>
               </div>
 
-              {/* MVP Development */}
-              <PricingCard
-                title="Web Application"
-                price="$12,500–$25,000"
-                description="Full-stack SaaS product ready for launch"
-                features={[
-                  'User authentication & management',
-                  'Database design & API development',
-                  'Dashboard UI & core features',
-                ]}
-                className="md:col-span-3"
-              />
-
               {/* Website + CMS */}
               <PricingCard
-                //title="Website + Headless Stack"
-                title="Headless Marketing Site"
-                price="$4,000–$12,000"
-                description="Marketing sites with CMS, payments, ecom"
+                title="Marketing & E-commerce Sites"
+                price="$5k–$20k"
+                description="High-converting sites with CMS integration. 3-5 week timeline."
                 features={[
-                  'Sanity CMS + Stripe payments',
-                  'E-commerce & content management',
-                  'SEO & performance optimized',
+                  'Product launch pages & campaign microsites',
+                  'Publishing platforms & portfolio sites',
+                  'Headless CMS (Sanity) + Stripe payments',
+                  'E-commerce storefronts (Shopify, BigCommerce, etc.)',
+                  'Affiliate marketing & lead generation',
+                  'SEO, LLM, & performance optimized',
                 ]}
                 className="md:col-span-3"
               />
 
               {/* Strategy Session */}
               <PricingCard
-                title="Strategy Session"
+                title="Strategy & Scoping Session"
                 price="$700"
-                description="Rolls into retainer or project"
-                features={['Technical feasibility analysis & complete architecture roadmap']}
+                description="Applied as credit toward any project over $10,000"
+                features={[
+                  'Technical feasibility analysis',
+                  'Complete architecture roadmap',
+                  'Timeline & budget estimation',
+                  'Technology stack recommendations',
+                ]}
                 className="md:col-span-2"
               />
 
               {/* Hourly Consulting */}
               <PricingCard
-                title="Hourly Consulting"
+                title="Technical Consulting"
                 price="$225/hour"
-                description="For quick turnarounds, second opinions, or deep technical insight without long-term commitment."
-                features={['Architecture review, code audits, and ad-hoc development support']}
+                description="For quick reviews, audits, or strategic guidance"
+                features={[
+                  'Frontend architecture & development',
+                  'Design systems & component libraries',
+                  'Web3/blockchain integration consulting',
+                  'Performance optimization and scaling',
+                  'AI integration & emerging web tech',
+                ]}
                 className="md:col-span-2"
               />
 
-              {/* Technical Co-Founder - bottom row */}
+              {/* Co-Founder Partnerships */}
               <PricingCard
-                title="Technical Co-Founder"
+                title="Co-Founder Partnerships"
                 price="Reduced rate + equity"
+                description="Equity partnership for early-stage startups"
                 features={['Significantly reduced costs + 2-5% equity for long-term partnership']}
                 className="md:col-span-2"
               />
