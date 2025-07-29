@@ -2,7 +2,7 @@ import ProcessCard from './ProcessCard';
 
 export default function Process() {
   return (
-    <section id="process" className="bg-muted/20 flex min-h-screen items-center py-20 md:py-32">
+    <section id="process" className="bg-muted/20 flex min-h-screen items-center py-16 md:py-32">
       <div className="container mx-auto px-4">
         <div className="mb-16 text-center">
           <h2 className="mb-6 text-2xl font-bold">How We Work</h2>

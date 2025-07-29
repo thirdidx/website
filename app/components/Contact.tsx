@@ -8,7 +8,7 @@ export default function Contact() {
   const [activeTab, setActiveTab] = useState<'contact' | 'project'>('contact');
 
   return (
-    <section id="contact" className="flex min-h-screen items-center py-20 md:py-32">
+    <section id="contact" className="flex min-h-screen items-center py-16 md:py-32">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="mb-16 text-center">

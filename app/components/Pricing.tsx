@@ -2,7 +2,7 @@ import PricingCard from './PricingCard';
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="flex min-h-screen items-center py-20 md:py-32">
+    <section id="pricing" className="flex min-h-screen items-center py-16 md:py-32">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 gap-4 md:grid-cols-12">
           <div className="col-span-12 flex flex-col gap-y-4 md:col-span-4">
@@ -141,7 +141,6 @@ export default function Pricing() {
                   'Design systems & component libraries',
                   'Web3/blockchain integration consulting',
                   'Performance optimization and scaling',
-                  'AI integration & emerging web tech',
                 ]}
                 className="md:col-span-2"
               />

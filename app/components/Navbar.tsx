@@ -18,12 +18,22 @@ export default function Navbar() {
       <div className="ml-1 h-auto w-5">
         <Logo />
       </div>
-      <nav className="flex gap-2 text-xs font-semibold md:gap-4">
-        <a href="#about">About</a>
-        <a href="#process">Process</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contact">Contact</a>
+      <nav className="hidden gap-2 text-xs font-semibold md:flex md:gap-4">
+        <a className="hover:no-underline" href="#about">
+          About
+        </a>
+        <a className="hover:no-underline" href="#process">
+          Process
+        </a>
+        <a className="hover:no-underline" href="#pricing">
+          Pricing
+        </a>
+        <a className="hover:no-underline" href="#faq">
+          FAQ
+        </a>
+        <a className="hover:no-underline" href="#contact">
+          Contact
+        </a>
       </nav>
       <div className="flex items-center justify-end">
         <button onClick={handleStartProjectClick} className="btn">

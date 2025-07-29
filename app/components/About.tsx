@@ -2,7 +2,7 @@ import WorkSampleCard from './WorkSampleCard';
 
 export default function About() {
   return (
-    <section id="about" className="flex min-h-screen items-center py-20 md:py-32">
+    <section id="about" className="flex min-h-screen items-center py-16 md:py-32">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 gap-4 md:grid-cols-12">
           {/* Main content area */}
@@ -13,11 +13,14 @@ export default function About() {
                 <div className="mb-6 font-mono text-xs">what we do</div>
                 <div className="flex flex-col gap-6 text-balance">
                   <p className="text-lg md:text-2xl">
-                    we turn ideas into working products people want to use.
+                    we build web applications that convert users and scale with your business.
                   </p>
-                  <p className="md:max-w-lg">
+                  <p className="text-balance md:max-w-lg">
                     full-stack development, thoughtfully designed. we build solid foundations so
-                    your product can scale without breaking.
+                    your product can grow without breaking. led by{' '}
+                    <a href="https://m1ke.xyz">michael ciccarelli</a>, a seasoned design engineer
+                    with 20 years of experience building digital products for startups and
+                    established brands.
                   </p>
                 </div>
               </div>

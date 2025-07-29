@@ -139,7 +139,11 @@
   }
 
   li::marker {
-    @apply text-primary;
+    @apply text-muted-foreground;
+  }
+
+  a:hover{
+    @apply text-primary underline;
   }
 }
 

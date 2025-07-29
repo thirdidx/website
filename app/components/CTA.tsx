@@ -18,7 +18,7 @@ export default function CTA() {
   };
 
   return (
-    <section id="contact" className="py-20 text-center md:py-32">
+    <section id="contact" className="py-16 text-center md:py-32">
       <div className="container mx-auto px-4">
         <h2 className="mb-6 text-2xl font-bold">Ready to Build?</h2>
         <p className="text-muted-foreground mx-auto mb-8 max-w-lg text-sm leading-relaxed">

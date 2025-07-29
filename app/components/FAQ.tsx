@@ -14,10 +14,8 @@ interface FAQItemProps {
 function FAQItem({ value, question, answer }: FAQItemProps) {
   return (
     <AccordionItem value={value}>
-      <AccordionTrigger className="text-left font-mono font-bold">
-        {question}
-      </AccordionTrigger>
-      <AccordionContent className='text-sm font-mono text-muted-foreground pr-4'>
+      <AccordionTrigger className="text-left font-mono font-bold">{question}</AccordionTrigger>
+      <AccordionContent className="text-muted-foreground pr-4 font-mono text-sm">
         {answer}
       </AccordionContent>
     </AccordionItem>
@@ -26,7 +24,7 @@ function FAQItem({ value, question, answer }: FAQItemProps) {
 
 export default function FAQ() {
   return (
-    <section id="faq" className="flex min-h-screen items-center py-20 md:py-32">
+    <section id="faq" className="flex min-h-screen items-center py-16 md:py-32">
       <div className="container mx-auto px-4">
         <div className="mb-16 text-center">
           <h2 className="mb-6 text-2xl font-bold">FAQ</h2>
@@ -40,7 +38,7 @@ export default function FAQ() {
             <FAQItem
               value="item-1"
               question="How long do projects take?"
-              answer="Simple sites: 2-4 weeks. Web apps: 6-12 weeks. We'll give you a timeline upfront and keep you posted weekly."
+              answer="Marketing sites: 3-5 weeks. Web apps: 6-10 weeks. We'll give you a timeline upfront and keep you posted weekly."
             />
             <FAQItem
               value="item-2"
@@ -65,7 +63,18 @@ export default function FAQ() {
             <FAQItem
               value="item-6"
               question="What's in the strategy session?"
-              answer="We'll figure out what's possible, plan the tech stack, estimate timelines, and map out your roadmap. You'll know exactly what it takes to build your idea."
+              answer="We'll figure out what's possible, plan the tech stack, estimate timelines, and map out your roadmap. You'll know exactly what it takes to build your idea. The $700 fee gets applied as credit toward any project over $10k."
+            />
+            <FAQItem
+              value="item-7"
+              question="How does the monthly retainer work?"
+              answer="$5,500/month gets you ~25 hours of dedicated development time. Perfect for ongoing features, maintenance, and growth after your initial launch. Most clients start with a project then move to retainer."
+            />
+
+            <FAQItem
+              value="item-9"
+              question="Who's behind thirdindex?"
+              answer="Michael Ciccarelli, a NYC-based software engineer and consultant with 20+ years building digital products for startups and established brands."
             />
           </Accordion>
         </div>
