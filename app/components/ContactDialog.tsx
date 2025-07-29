@@ -91,7 +91,7 @@ export default function ContactDialog({ showTrigger = true }: ContactDialogProps
         </div>
 
         {/* Form Content - Scrollable */}
-        <div className="max-h-[calc(85vh-80px)] overflow-y-auto px-12 py-8">
+        <div className="max-h-[calc(85vh-80px)] overflow-y-auto p-6 md:p-8">
           <div className="w-full">
             {activeTab === 'contact' && <ContactForm variant="default" />}
             {activeTab === 'project' && <ProjectInquiryForm variant="default" />}

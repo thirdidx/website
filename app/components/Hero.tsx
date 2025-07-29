@@ -7,7 +7,6 @@ export default function Hero() {
       style={{
         backgroundImage: 'linear-gradient(to bottom, #ccc, var(--color-background, #fefefe))',
         backgroundColor: 'var(--color-background, #fefefe)', // Fallback color
-        //backgroundImage: 'url(/bg-dither.jpg)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',

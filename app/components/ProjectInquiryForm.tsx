@@ -87,25 +87,25 @@ export default function ProjectInquiryForm({ variant = 'default' }: ProjectInqui
 
   const isDialog = variant === 'dialog';
   const inputClasses = isDialog
-    ? "w-full bg-transparent border-0 border-b border-blue-300/30 px-0 py-4 text-xl text-white placeholder:text-blue-200/60 focus:border-white focus:outline-none focus:ring-0 transition-colors"
-    : "w-full bg-transparent border-0 border-b border-border px-0 py-4 text-xl text-foreground placeholder:text-muted-foreground focus:border-foreground focus:outline-none focus:ring-0 transition-colors";
+    ? "w-full bg-transparent border-0 border-b border-blue-300/30 px-0 py-3 text-lg text-white placeholder:text-blue-200/60 focus:border-white focus:outline-none focus:ring-0 transition-colors"
+    : "w-full bg-transparent border-0 border-b border-border px-0 py-3 text-base text-foreground placeholder:text-muted-foreground focus:border-foreground focus:outline-none focus:ring-0 transition-colors";
   
   const selectClasses = isDialog
-    ? "w-full bg-blue-600 border-0 border-b border-blue-300/30 px-0 py-4 text-xl text-white focus:border-white focus:outline-none focus:ring-0 transition-colors"
-    : "w-full bg-background border-0 border-b border-border px-0 py-4 text-xl text-foreground focus:border-foreground focus:outline-none focus:ring-0 transition-colors";
+    ? "w-full bg-blue-600 border-0 border-b border-blue-300/30 px-0 py-3 text-lg text-white focus:border-white focus:outline-none focus:ring-0 transition-colors"
+    : "w-full bg-background border-0 border-b border-border px-0 py-3 text-base text-foreground focus:border-foreground focus:outline-none focus:ring-0 transition-colors";
   
   const labelClasses = isDialog
     ? "block text-sm font-mono text-blue-200"
     : "block text-sm font-mono text-muted-foreground";
     
   const buttonClasses = isDialog
-    ? "w-full bg-white text-blue-600 py-4 px-8 rounded-md text-lg font-medium hover:bg-blue-50 transition-colors disabled:opacity-50"
-    : "w-full bg-foreground text-background py-4 px-8 rounded-md text-lg font-medium hover:bg-foreground/90 transition-colors disabled:opacity-50";
+    ? "w-full bg-white text-blue-600 py-3 px-6 rounded-md text-base font-medium hover:bg-blue-50 transition-colors disabled:opacity-50"
+    : "w-full bg-foreground text-background py-3 px-6 rounded-md text-base font-medium hover:bg-foreground/90 transition-colors disabled:opacity-50";
 
   return (
-    <form onSubmit={handleSubmit} className="col-span-12 md:col-span-10 md:col-start-2 space-y-12">
+    <form onSubmit={handleSubmit} className="col-span-12 md:col-span-10 md:col-start-2 space-y-6">
       {/* Basic Info */}
-      <div className="grid gap-12 md:grid-cols-2">
+      <div className="grid gap-6 md:grid-cols-2">
         <div className="space-y-2">
           <label htmlFor="name" className="block text-sm font-mono text-muted-foreground">
             Name
@@ -155,7 +155,7 @@ export default function ProjectInquiryForm({ variant = 'default' }: ProjectInqui
       </div>
 
       {/* Project Details */}
-      <div className="grid gap-12 md:grid-cols-2">
+      <div className="grid gap-6 md:grid-cols-2">
         <div className="space-y-2">
           <label className="block text-sm font-mono text-muted-foreground">
             Project Type
@@ -281,7 +281,7 @@ export default function ProjectInquiryForm({ variant = 'default' }: ProjectInqui
         />
       </div>
 
-      <div className="pt-8">
+      <div className="pt-4">
         <button
           type="submit"
           className={buttonClasses}

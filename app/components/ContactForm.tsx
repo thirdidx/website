@@ -57,23 +57,23 @@ export default function ContactForm({ variant = 'default' }: ContactFormProps) {
 
   const isDialog = variant === 'dialog';
   const inputClasses = isDialog
-    ? 'w-full bg-transparent border-0 border-b border-blue-300/30 px-0 py-6 text-2xl text-white placeholder:text-blue-200/60 focus:border-white focus:outline-none focus:ring-0 transition-colors'
-    : 'w-full bg-transparent border-0 border-b border-border px-0 py-4 text-xl text-foreground placeholder:text-muted-foreground focus:border-foreground focus:outline-none focus:ring-0 transition-colors';
+    ? 'w-full bg-transparent border-0 border-b border-blue-300/30 px-0 py-4 text-lg text-white placeholder:text-blue-200/60 focus:border-white focus:outline-none focus:ring-0 transition-colors'
+    : 'w-full bg-transparent border-0 border-b border-border px-0 py-3 text-base text-foreground placeholder:text-muted-foreground focus:border-foreground focus:outline-none focus:ring-0 transition-colors';
 
   const labelClasses = isDialog
     ? 'block text-base font-mono text-blue-200'
     : 'block text-sm font-mono text-muted-foreground';
 
   const buttonClasses = isDialog
-    ? 'w-full bg-white text-[#0066ff] py-6 px-12 rounded-md text-xl font-medium hover:bg-blue-50 transition-colors disabled:opacity-50'
-    : 'w-full bg-foreground text-background py-4 px-8 rounded-md text-lg font-medium hover:bg-foreground/90 transition-colors disabled:opacity-50';
+    ? 'w-full bg-white text-[#0066ff] py-4 px-8 rounded-md text-lg font-medium hover:bg-blue-50 transition-colors disabled:opacity-50'
+    : 'w-full bg-foreground text-background py-3 px-6 rounded-md text-base font-medium hover:bg-foreground/90 transition-colors disabled:opacity-50';
 
   return (
     <form
       onSubmit={handleSubmit}
-      className={cn('col-span-12 md:col-span-10 md:col-start-2', { 'space-y-12': isDialog })}
+      className={cn('col-span-12 md:col-span-10 md:col-start-2', { 'space-y-8': isDialog, 'space-y-6': !isDialog })}
     >
-      <div className={`grid md:grid-cols-2 ${isDialog ? 'gap-12' : 'gap-12'}`}>
+      <div className={`grid md:grid-cols-2 ${isDialog ? 'gap-8' : 'gap-6'}`}>
         <div className="space-y-2">
           <label htmlFor="name" className={labelClasses}>
             Name
@@ -138,7 +138,7 @@ export default function ContactForm({ variant = 'default' }: ContactFormProps) {
         />
       </div>
 
-      <div className={isDialog ? 'pt-8' : 'pt-8'}>
+      <div className={isDialog ? 'pt-6' : 'pt-4'}>
         <button type="submit" className={buttonClasses} disabled={isSubmitting}>
           {isSubmitting ? 'Sending...' : 'Send Message'}
         </button>

@@ -85,10 +85,6 @@ export default function About() {
                 projectDescription="portfolio site for amazon (xcm). next.js, sanity, tailwind css & motion"
                 liveUrl="https://amazonthe.bar"
               />
-
-              {/* <div>
-                <div className="mb-6 font-mono text-xs">see more projects</div>
-              </div> */}
             </div>
           </div>
         </div>

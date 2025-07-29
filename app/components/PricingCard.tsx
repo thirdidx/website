@@ -1,6 +1,5 @@
 'use client';
 
-import React from 'react';
 
 interface PricingCardProps {
   title: string;
@@ -8,7 +7,6 @@ interface PricingCardProps {
   description?: string;
   features: string[];
   className?: string;
-  size?: 'normal' | 'large';
 }
 
 export default function PricingCard({ 
@@ -16,8 +14,7 @@ export default function PricingCard({
   price, 
   description, 
   features, 
-  className = '',
-  size = 'normal'
+  className = ''
 }: PricingCardProps) {
   return (
     <div className={`group cursor-pointer h-full ${className}`}>
@@ -38,7 +35,7 @@ export default function PricingCard({
         </div>
 
         <h3 className="mb-2 font-semibold">{title}</h3>
-        <div className={`mb-4 font-bold ${size === 'large' ? 'text-2xl' : 'text-xl'}`}>
+        <div className="mb-4 font-bold text-xl">
           {price}
         </div>
         {description && (

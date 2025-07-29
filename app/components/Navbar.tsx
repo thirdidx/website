@@ -1,6 +1,5 @@
 'use client';
 
-import React from 'react';
 import { useSetAtom } from 'jotai';
 import { contactDialogOpenAtom, contactDialogTabAtom } from '@/app/lib/atoms';
 import Logo from './Logo';
