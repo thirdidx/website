@@ -26,11 +26,9 @@ export default function About() {
               <div className="col-span-2 md:col-span-1">
                 <WorkSampleCard
                   size="small"
-                  imageSrc="/projects/kelvon.png"
-                  alt="Kelvon project"
-                  projectName="Kelvon Agee"
-                  projectDescription="photographer site. next.js/cloudinary, tailwind css & motion"
-                  liveUrl="https://kelvonagee.com"
+                  alt="Add your project"
+                  projectName="Your Project?"
+                  liveUrl="#contact"
                 />
               </div>
 
@@ -62,9 +60,11 @@ export default function About() {
               <div className="col-span-2 md:col-span-1">
                 <WorkSampleCard
                   size="small"
-                  alt="Add your project"
-                  projectName="Your Project?"
-                  liveUrl="#contact"
+                  imageSrc="/projects/kelvon.png"
+                  alt="Kelvon project"
+                  projectName="Kelvon Agee"
+                  projectDescription="photographer site. next.js/cloudinary, tailwind css & motion"
+                  liveUrl="https://kelvonagee.com"
                 />
               </div>
             </div>
