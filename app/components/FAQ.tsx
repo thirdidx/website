@@ -38,43 +38,32 @@ export default function FAQ() {
             <FAQItem
               value="item-1"
               question="How long do projects take?"
-              answer="Marketing sites: 3-5 weeks. Web apps: 6-10 weeks. We'll give you a timeline upfront and keep you posted weekly."
+              answer="Most web applications take 6-10 weeks. Marketing sites typically 3-5 weeks."
             />
             <FAQItem
               value="item-2"
               question="Do you work with startups?"
-              answer="Absolutely! Most of our clients are early-stage startups building their MVP. We even offer equity partnerships for the right projects."
+              answer="Yes, we specialize in early-stage companies needing technical leadership and rapid execution."
             />
             <FAQItem
               value="item-3"
-              question="What tech do you use?"
-              answer="Next.js, React, TypeScript, Node.js. PostgreSQL, Supabase for data. Stripe for payments. Deploy on Vercel or AWS."
+              question="What's your tech stack?"
+              answer="React/Next.js, Node.js, modern databases, and best-in-class tools for each project's needs."
             />
             <FAQItem
               value="item-4"
               question="Do you handle ongoing maintenance?"
-              answer="Yep! Our monthly retainer covers bug fixes, updates, new features, and keeping everything running smooth."
+              answer="Yes, through our monthly retainer program for continued development and optimization."
             />
             <FAQItem
               value="item-5"
-              question="Design and development?"
-              answer="Both! We handle most UI/UX work ourselves. For complex design projects, we team up with trusted partners."
+              question="What's greenfield development?"
+              answer="Building new applications from scratch with modern architecture and no legacy constraints."
             />
             <FAQItem
               value="item-6"
               question="What's in the strategy session?"
-              answer="We'll figure out what's possible, plan the tech stack, estimate timelines, and map out your roadmap. You'll know exactly what it takes to build your idea. The $700 fee gets applied as credit toward any project over $10k."
-            />
-            <FAQItem
-              value="item-7"
-              question="How does the monthly retainer work?"
-              answer="$5,500/month gets you ~25 hours of dedicated development time. Perfect for ongoing features, maintenance, and growth after your initial launch. Most clients start with a project then move to retainer."
-            />
-
-            <FAQItem
-              value="item-9"
-              question="Who's behind thirdindex?"
-              answer="Michael Ciccarelli, a NYC-based software engineer and consultant with 20+ years building digital products for startups and established brands."
+              answer="Technical feasibility analysis, architecture planning, timeline estimation, and tech stack recommendations."
             />
           </Accordion>
         </div>

@@ -13,14 +13,14 @@ export default function About() {
                 <div className="mb-6 font-mono text-xs">what we do</div>
                 <div className="flex flex-col gap-6 text-balance">
                   <p className="text-lg md:text-2xl">
-                    we build web applications that convert users and scale with your business.
+                    digital studio specializing in modern web technologies and user experience. We
+                    architect scalable foundations and craft interfaces that feel effortless to use.
                   </p>
                   <p className="text-balance md:max-w-lg">
-                    full-stack development, thoughtfully designed. we build solid foundations so
-                    your product can grow without breaking. led by{' '}
-                    <a href="https://m1ke.xyz">michael ciccarelli</a>, a seasoned design engineer
-                    with 20 years of experience building digital products for startups and
-                    established brands.
+                    led by <a href="https://m1ke.xyz">michael ciccarelli</a>, a full-stack engineer
+                    with 20 years building digital products for startups and established brands. We
+                    handle complete technical implementation so you can focus on growing your
+                    business.
                   </p>
                 </div>
               </div>
@@ -37,14 +37,14 @@ export default function About() {
 
               {/* Services list - spans 2 columns */}
               <div className="col-span-4 md:col-span-2">
-                <div className="mb-6 font-mono text-xs">services</div>
+                <div className="mb-6 font-mono text-xs">Our expertise:</div>
                 <ul>
-                  <li>web apps & saas platforms</li>
-                  <li>ecommerce & payments</li>
-                  <li>blockchain integrations</li>
-                  <li>ui/ux & animations</li>
-                  <li>marketing sites & cms</li>
-                  <li>architecture & scaling</li>
+                  <li>greenfield web application development</li>
+                  <li>modern frontend architecture (React/Next.js)</li>
+                  <li>interactive UI/UX with motion design</li>
+                  <li>e-commerce & payment integration</li>
+                  <li>blockchain & web3 platforms</li>
+                  <li>Performance optimization & scaling</li>
                 </ul>
               </div>
 

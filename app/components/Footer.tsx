@@ -3,12 +3,12 @@ import TimeDisplay from './TimeDisplay';
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   return (
-    <footer className="flex flex-col gap-y-12 p-4 text-xs md:gap-y-24">
-      <div className="flex items-center justify-center gap-2 opacity-[0.05]">
+    <footer className="relative flex items-end justify-between p-4 text-xs md:h-24">
+      <div className="absolute top-1/2 left-1/2 hidden -translate-x-1/2 -translate-y-1/2 items-center justify-center gap-2 opacity-[0.05] md:flex">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 538 90"
-          className="h-auto w-full max-w-[380px]"
+          className="h-auto w-full max-w-[415px]"
           fill="none"
         >
           <path
@@ -24,11 +24,9 @@ export default function Footer() {
           </g>
         </svg>
       </div>
-      <div className="flex items-center justify-between gap-2 text-xs">
-        <div className="flex items-center">© {currentYear} thirdindex LLC</div>
-        <div className="flex items-center gap-2 text-xs">
-          <TimeDisplay />
-        </div>
+      <div className="flex items-center">© {currentYear} thirdindex LLC</div>
+      <div className="flex items-center gap-2 text-xs">
+        <TimeDisplay />
       </div>
     </footer>
   );
