@@ -7,8 +7,7 @@ export default function Process() {
         <div className="mb-16 text-center">
           <h2 className="mb-6 text-2xl font-bold">How We Work</h2>
           <p className="text-muted-foreground mx-auto max-w-lg text-sm leading-relaxed">
-            We build in the open with weekly demos and fast feedback loops. Your product launches
-            right, not just fast.
+            We build in the open with weekly demos and fast feedback loops.
           </p>
         </div>
 
@@ -18,21 +17,21 @@ export default function Process() {
           <ProcessCard
             number="01"
             title="Discovery & Planning"
-            description="We start with your business goals and user needs, then architect the technical approach that gets you there fastest."
+            description="We start with your business goals and user needs. Bring your design direction and we'll execute it, or we'll handle design and development together."
           />
 
           {/* Development */}
           <ProcessCard
             number="02"
             title="Rapid Development"
-            description="Weekly demos and iterative builds. Fast feedback loops mean fewer wrong turns."
+            description="Weekly demos and iterative builds covering code, design and motion. Fast feedback loops mean fewer wrong turns."
           />
 
           {/* Launch */}
           <ProcessCard
             number="03"
             title="Launch & Optimize"
-            description="Deployment, monitoring, and performance optimization. Your product launches right, not just fast."
+            description="Deployment, monitoring, and performance optimization. Your complete product launches right, not just fast."
           />
         </div>
       </div>

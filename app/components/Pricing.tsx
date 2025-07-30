@@ -7,7 +7,7 @@ export default function Pricing() {
         <div className="grid grid-cols-1 gap-4 md:grid-cols-12">
           <div className="col-span-12 flex flex-col gap-y-4 md:col-span-4">
             <div>
-              <h2 className="mb-6 text-2xl font-bold">Pricing</h2>
+              <h2 className="mb-6 text-2xl font-bold">Pricing &amp; Engagement</h2>
               <p className="text-muted-foreground text-sm leading-relaxed">
                 Have an idea? Let's scope it out.
               </p>
@@ -100,8 +100,8 @@ export default function Pricing() {
               <PricingCard
                 title="Equity Partnerships"
                 price="For early-stage startups"
-                description="Reduced costs + 2-4% equity stake"
-                features={['Significantly reduced costs + 2-4% equity for long-term partnership']}
+                description="Reduced costs + 2-5% equity stake"
+                features={['Significantly reduced costs + 2-5% equity for long-term partnership']}
                 className="md:col-span-2"
               />
             </div>

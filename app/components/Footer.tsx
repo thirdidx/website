@@ -4,7 +4,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
   return (
     <footer className="relative flex items-end justify-between p-4 text-xs md:h-24">
-      <div className="absolute top-1/2 left-1/2 hidden -translate-x-1/2 -translate-y-1/2 items-center justify-center gap-2 opacity-[0.05] md:flex">
+      <div className="absolute top-1/2 left-1/2 hidden -translate-x-1/2 -translate-y-[40%] items-center justify-center gap-2 opacity-[0.05] md:flex">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 538 90"

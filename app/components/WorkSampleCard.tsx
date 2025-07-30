@@ -104,7 +104,7 @@ export default function WorkSampleCard({
             <div className="flex flex-col items-center justify-center text-center">
               <ArrowRight className={`${size === 'large' ? 'w-12 h-12' : 'w-8 h-8'} text-muted-foreground group-hover:text-white transition-all duration-300 mb-2 group-hover:rotate-90`} />
               <span className={`font-mono font-bold text-muted-foreground group-hover:text-white transition-colors duration-300 ${size === 'large' ? 'text-sm' : 'text-xs'}`}>
-                Start Your Project
+                Start your project
               </span>
             </div>
           </div>
