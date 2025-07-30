@@ -26,7 +26,7 @@ export default function Hero() {
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 380 71"
             fill="none"
-            className="h-auto w-full max-w-[380px]"
+            className="h-auto w-full max-w-[220px] md:max-w-[380px]"
           >
             <path
               fill="currentColor"
@@ -38,7 +38,7 @@ export default function Hero() {
             />
           </svg>
         </div>
-        <div className="col-span-12 flex flex-col justify-end gap-2 md:col-span-2 md:col-start-11">
+        <div className="col-span-12 flex flex-col justify-end gap-2 md:col-span-6 md:col-start-7 xl:col-span-3 xl:col-start-10">
           <p className="text-balance">
             we build web applications with clean code and thoughtful design. from MVPs to full
             platforms.

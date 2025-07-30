@@ -7,7 +7,8 @@ export default function Process() {
         <div className="mb-16 text-center">
           <h2 className="mb-6 text-2xl font-bold">How We Work</h2>
           <p className="text-muted-foreground mx-auto max-w-lg text-sm leading-relaxed">
-            From strategy to launch, we build in the open. No surprises, just results.
+            We build in the open with weekly demos and fast feedback loops. Your product launches
+            right, not just fast.
           </p>
         </div>
 

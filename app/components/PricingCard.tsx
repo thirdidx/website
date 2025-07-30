@@ -1,5 +1,7 @@
 'use client';
 
+import { InfoIcon } from 'lucide-react';
+import { Popover, PopoverContent, PopoverTrigger } from '../../components/ui/popover';
 
 interface PricingCardProps {
   title: string;
@@ -34,23 +36,42 @@ export default function PricingCard({
           <div className="border-foreground/90 absolute right-0 bottom-0 h-2 w-2 translate-x-px translate-y-px border-r border-b transition-all duration-300 group-hover:translate-x-1 group-hover:translate-y-1"></div>
         </div>
 
-        <h3 className="mb-2 font-semibold">{title}</h3>
-        <div className="mb-4 font-bold text-xl">
+        <div className="flex items-center justify-between mb-2">
+          <h3 className="font-semibold">{title}</h3>
+          <Popover>
+            <PopoverTrigger asChild>
+              <button className="pointer-events-auto p-1 hover:bg-muted/20 rounded-full transition-colors">
+                <InfoIcon className="h-4 w-4 text-muted-foreground" />
+              </button>
+            </PopoverTrigger>
+            <PopoverContent className="w-80">
+              <div className="space-y-3">
+                <h4 className="font-semibold text-sm">{title}</h4>
+                {description && (
+                  <p className="text-muted-foreground text-xs">
+                    {description}
+                  </p>
+                )}
+                <ul className="text-muted-foreground space-y-1 text-xs">
+                  {features.map((feature, index) => (
+                    <li key={index} className="flex items-start gap-2">
+                      <div className="bg-muted-foreground h-1 w-1 rounded-full mt-2 flex-shrink-0"></div>
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </PopoverContent>
+          </Popover>
+        </div>
+        <div className="font-bold text-xl">
           {price}
         </div>
         {description && (
-          <p className="text-muted-foreground mb-4 text-xs">
+          <p className="text-muted-foreground mt-2 text-xs">
             {description}
           </p>
         )}
-        <ul className="text-muted-foreground space-y-2 text-sm flex-1">
-          {features.map((feature, index) => (
-            <li key={index} className="flex items-center gap-2">
-              {features.length > 1 && <div className="bg-muted-foreground h-1 w-1 rounded-full"></div>}
-              <span>{feature}</span>
-            </li>
-          ))}
-        </ul>
       </div>
     </div>
   );

@@ -22,7 +22,7 @@ export default function CTA() {
       <div className="container mx-auto px-4">
         <h2 className="mb-6 text-2xl font-bold">Ready to Build?</h2>
         <p className="text-muted-foreground mx-auto mb-8 max-w-lg text-sm leading-relaxed">
-          Let's turn your idea into reality. Tell us about your project.
+          Let's discuss your project and see if we're a good fit.
         </p>
         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
           <button
@@ -39,7 +39,7 @@ export default function CTA() {
           </button>
         </div>
         <p className="text-muted-foreground mt-6 text-xs">
-          Or email us directly at{' '}
+          Or email directly: {' '}
           <a href="mailto:info@thirdindex.co" className="hover:underline">
             info@thirdindex.co
           </a>
