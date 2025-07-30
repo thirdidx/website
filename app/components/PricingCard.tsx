@@ -1,7 +1,8 @@
 'use client';
 
-import { InfoIcon } from 'lucide-react';
+import { InfoIcon, CreditCardIcon } from 'lucide-react';
 import { Popover, PopoverContent, PopoverTrigger } from '../../components/ui/popover';
+import { Tooltip, TooltipContent, TooltipTrigger, TooltipProvider } from '../../components/ui/tooltip';
 
 interface PricingCardProps {
   title: string;
@@ -9,6 +10,7 @@ interface PricingCardProps {
   description?: string;
   features: string[];
   className?: string;
+  paymentUrl?: string;
 }
 
 export default function PricingCard({ 
@@ -16,7 +18,8 @@ export default function PricingCard({
   price, 
   description, 
   features, 
-  className = ''
+  className = '',
+  paymentUrl
 }: PricingCardProps) {
   return (
     <div className={`group cursor-pointer h-full ${className}`}>
@@ -38,31 +41,52 @@ export default function PricingCard({
 
         <div className="flex items-center justify-between mb-2">
           <h3 className="font-semibold">{title}</h3>
-          <Popover>
-            <PopoverTrigger asChild>
-              <button className="pointer-events-auto p-1 hover:bg-muted/20 rounded-full transition-colors">
-                <InfoIcon className="h-4 w-4 text-muted-foreground" />
-              </button>
-            </PopoverTrigger>
-            <PopoverContent className="w-80">
-              <div className="space-y-3">
-                <h4 className="font-semibold text-sm">{title}</h4>
-                {description && (
-                  <p className="text-muted-foreground text-xs">
-                    {description}
-                  </p>
-                )}
-                <ul className="text-muted-foreground space-y-1 text-xs">
-                  {features.map((feature, index) => (
-                    <li key={index} className="flex items-start gap-2">
-                      <div className="bg-muted-foreground h-1 w-1 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </PopoverContent>
-          </Popover>
+          <div className="flex items-center gap-2">
+            {paymentUrl && (
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <a
+                      href={paymentUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="pointer-events-auto p-1 hover:bg-muted/20 rounded-full transition-colors"
+                    >
+                      <CreditCardIcon className="h-4 w-4 text-muted-foreground" />
+                    </a>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>Pay securely via Stripe</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+            )}
+            <Popover>
+              <PopoverTrigger asChild>
+                <button className="pointer-events-auto p-1 hover:bg-muted/20 rounded-full transition-colors">
+                  <InfoIcon className="h-4 w-4 text-muted-foreground" />
+                </button>
+              </PopoverTrigger>
+              <PopoverContent className="w-80">
+                <div className="space-y-3">
+                  <h4 className="font-semibold text-sm">{title}</h4>
+                  {description && (
+                    <p className="text-muted-foreground text-xs">
+                      {description}
+                    </p>
+                  )}
+                  <ul className="text-muted-foreground space-y-1 text-xs">
+                    {features.map((feature, index) => (
+                      <li key={index} className="flex items-start gap-2">
+                        <div className="bg-muted-foreground h-1 w-1 rounded-full mt-2 flex-shrink-0"></div>
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </PopoverContent>
+            </Popover>
+          </div>
         </div>
         <div className="font-bold text-xl">
           {price}

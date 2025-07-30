@@ -23,6 +23,7 @@ export default function Pricing() {
               <PricingCard
                 title="Web Applications"
                 price="$12k–$35k | 6-10 weeks"
+                paymentUrl="https://buy.stripe.com/aFafZh7nA4sA44M7DC0Ba01"
                 description="Complete product from concept to launch"
                 features={[
                   'Full-stack development',
@@ -38,6 +39,7 @@ export default function Pricing() {
               <PricingCard
                 title="Monthly Retainer"
                 price="$5,500/month | ~25 hours"
+                paymentUrl="https://buy.stripe.com/3cI6oH37k7EMeJq9LK0Ba03"
                 description="Ongoing development & optimization"
                 features={[
                   'Includes ~25 hours/month of dedicated development',
@@ -47,7 +49,7 @@ export default function Pricing() {
                   'Performance monitoring & optimization',
                   'Security updates & maintenance',
                   'Priority support & weekly planning calls',
-                  'Perfect for post-launch iteration and growth'
+                  'Perfect for post-launch iteration and growth',
                 ]}
                 className="md:col-span-3 md:row-span-2"
               />
@@ -55,6 +57,7 @@ export default function Pricing() {
               <PricingCard
                 title="Marketing Sites"
                 price="$5k–$15k | 3-5 weeks"
+                paymentUrl="https://buy.stripe.com/8x24gzeQ29MU44Mf640Ba02"
                 description="High-converting sites with CMS"
                 features={[
                   'Product launch pages & campaign microsites',
@@ -70,6 +73,7 @@ export default function Pricing() {
               <PricingCard
                 title="Strategy Session"
                 price="$700"
+                paymentUrl="https://buy.stripe.com/8x214n23g0ck0SAaPO0Ba00"
                 description="Applied as credit toward projects over $10k"
                 features={[
                   'Technical feasibility analysis',
