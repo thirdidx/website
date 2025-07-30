@@ -42,6 +42,7 @@ export default function About() {
                   <li>greenfield web application development</li>
                   <li>modern frontend architecture (React/Next.js)</li>
                   <li>interactive UI/UX with motion design</li>
+                  <li>publishing platforms & creative portfolios</li>
                   <li>e-commerce & payment integration</li>
                   <li>blockchain & web3 platforms</li>
                   <li>Performance optimization & scaling</li>

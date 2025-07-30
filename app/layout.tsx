@@ -1,22 +1,8 @@
 import type React from 'react';
 import './globals.css';
 import type { Metadata } from 'next';
-import { Inconsolata, Geist, Space_Mono } from 'next/font/google';
+import { Inconsolata } from 'next/font/google';
 import { Provider } from 'jotai';
-
-const geist = Geist({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800', '900'],
-  variable: '--font-geist',
-  display: 'swap',
-});
-
-const spaceMono = Space_Mono({
-  subsets: ['latin'],
-  weight: ['400', '700'],
-  variable: '--font-space-mono',
-  display: 'swap',
-});
 
 const inconsolata = Inconsolata({
   subsets: ['latin'],
@@ -47,7 +33,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${geist.variable} ${inconsolata.variable} ${spaceMono.variable}`}>
+    <html lang="en" className={`${inconsolata.variable}`}>
       <body>
         <Provider>{children}</Provider>
       </body>

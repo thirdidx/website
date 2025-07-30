@@ -25,7 +25,7 @@ export default function Pricing() {
                 price="$12k–$35k | 6-10 weeks"
                 description="Complete product from concept to launch"
                 features={[
-                  'Modern frontend architecture (Next.js, React)',
+                  'Full-stack development',
                   'Design-driven user interfaces',
                   'Dashboard UI & core features',
                   'User authentication & management',
@@ -59,17 +59,17 @@ export default function Pricing() {
                 features={[
                   'Product launch pages & campaign microsites',
                   'Publishing platforms & portfolio sites',
-                  'Headless CMS (Sanity) + Stripe payments',
-                  'E-commerce storefronts (Shopify, BigCommerce, etc.)',
-                  'Affiliate marketing & lead generation',
-                  'SEO, LLM, & performance optimized',
+                  'Headless CMS integration (Sanity, Contentful)',
+                  'E-commerce & payment systems (Stripe, Shopify)',
+                  'SEO optimization & performance tuning',
+                  'Analytics & conversion tracking',
                 ]}
                 className="md:col-span-3"
               />
 
               <PricingCard
                 title="Strategy Session"
-                price="$700 | 2 hours"
+                price="$700"
                 description="Applied as credit toward projects over $10k"
                 features={[
                   'Technical feasibility analysis',
