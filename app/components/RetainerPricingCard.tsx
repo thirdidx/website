@@ -78,7 +78,7 @@ export default function RetainerPricingCard({ className = '' }: { className?: st
         </div>
 
         <div className="mb-4 flex items-center justify-between">
-          <h3 className="font-mono text-2xl text-balance md:text-3xl">Monthly Retainer</h3>
+          <h3 className="font-mono text-xl text-balance">Monthly Retainer</h3>
           <div className="flex items-center gap-2">
             <Popover>
               <PopoverTrigger asChild>
@@ -88,7 +88,7 @@ export default function RetainerPricingCard({ className = '' }: { className?: st
               </PopoverTrigger>
               <PopoverContent className="w-80">
                 <div className="space-y-3">
-                  <h4 className="font-mono text-2xl font-medium text-balance md:text-3xl">
+                  <h4 className="font-mono text-xl text-balance md:text-2xl">
                     {plan.name} Retainer
                   </h4>
                   <p className="text-muted-foreground font-mono text-xs text-balance">

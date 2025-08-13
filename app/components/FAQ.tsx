@@ -27,7 +27,7 @@ export default function FAQ() {
     <section id="faq" className="py-32 md:py-40">
       <div className="container mx-auto max-w-7xl px-4">
         <div className="mb-8 text-center">
-          <h2 className="mb-4 text-2xl md:text-4xl">FAQ</h2>
+          <h2 className="mb-4 font-mono text-2xl md:text-4xl">FAQ</h2>
           <p className="text-muted-foreground mx-auto max-w-lg text-sm leading-relaxed">
             Quick answers to common questions. Don't see yours? Just ask.
           </p>

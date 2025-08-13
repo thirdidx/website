@@ -33,7 +33,7 @@ export default function Process() {
     <section id="process" className="py-32 md:py-40">
       <div className="container mx-auto max-w-7xl px-4">
         <div className="mb-12 text-center">
-          <h2 className="mb-4 text-2xl md:text-4xl">How We Work</h2>
+          <h2 className="font-mono mb-4 text-2xl md:text-4xl">How We Work</h2>
           <p className="text-muted-foreground text-sm leading-relaxed">
             We build in the open with weekly demos and fast feedback loops.
           </p>

@@ -39,7 +39,7 @@ export default function PricingCard({
         </div>
 
         <div className="mb-2 flex items-center justify-between">
-          <h3 className="font-mono text-2xl text-balance md:text-3xl">{title}</h3>
+          <h3 className="font-mono text-2xl text-balance">{title}</h3>
           <div className="flex items-center gap-2">
             <Popover>
               <PopoverTrigger asChild>
@@ -49,8 +49,12 @@ export default function PricingCard({
               </PopoverTrigger>
               <PopoverContent className="w-80">
                 <div className="space-y-3">
-                  <h4 className="font-mono text-2xl font-medium text-balance md:text-3xl">{title}</h4>
-                  {description && <p className="text-muted-foreground font-mono text-xs text-balance">{description}</p>}
+                  <h4 className="font-mono text-xl text-balance md:text-2xl">{title}</h4>
+                  {description && (
+                    <p className="text-muted-foreground font-mono text-xs text-balance">
+                      {description}
+                    </p>
+                  )}
                   <ul className="text-muted-foreground space-y-1 font-mono text-xs">
                     {features.map((feature, index) => (
                       <li key={index} className="flex items-start gap-2">
@@ -66,8 +70,12 @@ export default function PricingCard({
         </div>
 
         <div className="flex-1">
-          <div className="font-mono text-2xl font-medium text-balance md:text-3xl">{price}</div>
-          {description && <p className="text-muted-foreground mt-2 font-mono text-xs text-balance">{description}</p>}
+          <div className="font-mono text-xl text-balance">{price}</div>
+          {description && (
+            <p className="text-muted-foreground mt-2 font-mono text-xs text-balance">
+              {description}
+            </p>
+          )}
         </div>
 
         {/* CTA Button at bottom */}
