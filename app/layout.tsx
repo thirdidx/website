@@ -1,40 +1,14 @@
 import type React from 'react';
-import './globals.css';
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
-import {
-  Work_Sans,
-  Inconsolata,
-  Space_Mono,
-  Space_Grotesk,
-} from 'next/font/google';
+import { Space_Mono } from 'next/font/google';
 import { Provider } from 'jotai';
-
-const workSans = Work_Sans({
-  subsets: ['latin'],
-  weight: ['400', '500', '600'],
-  variable: '--font-work-sans',
-  display: 'swap',
-});
-
-const inconsolata = Inconsolata({
-  subsets: ['latin'],
-  weight: ['400', '500', '600'],
-  variable: '--font-inconsolata',
-  display: 'swap',
-});
+import './globals.css';
 
 const spaceMono = Space_Mono({
   subsets: ['latin'],
   weight: ['400', '700'],
   variable: '--font-space-mono',
-  display: 'swap',
-});
-
-const spaceGrotesk = Space_Grotesk({
-  subsets: ['latin'],
-  weight: ['400', '500', '600'],
-  variable: '--font-space-grotesk',
   display: 'swap',
 });
 
@@ -63,7 +37,7 @@ const saolDisplay = localFont({
 export const metadata: Metadata = {
   title: 'thirdindex',
   description:
-    'Tech consultancy and digital studio building custom web applications with engineering rigor and thoughtful design',
+    'digital studio and consultancy building custom web applications with engineering rigor and thoughtful design',
   icons: [
     {
       rel: 'icon',
@@ -82,10 +56,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html
-      lang="en"
-      className={`${spaceMono.variable} ${spaceGrotesk.variable} ${saolDisplay.variable} ${workSans.variable}`}
-    >
+    <html lang="en" className={`${spaceMono.variable} ${saolDisplay.variable}`}>
       <body>
         <Provider>{children}</Provider>
       </body>

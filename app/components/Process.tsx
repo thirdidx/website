@@ -24,16 +24,16 @@ export default function Process() {
       y: 0,
       transition: {
         duration: 0.7,
-        ease: [0.22, 1, 0.36, 1], // Custom easing for smooth drop
+        ease: [0.22, 1, 0.36, 1] as [number, number, number, number], // Custom easing for smooth drop
       },
     },
   };
 
   return (
     <section id="process" className="py-32 md:py-40">
-      <div className="container mx-auto px-4 max-w-7xl">
+      <div className="container mx-auto max-w-7xl px-4">
         <div className="mb-12 text-center">
-          <h2 className="mb-4 text-2xl font-bold">How We Work</h2>
+          <h2 className="mb-4 text-2xl md:text-4xl">How We Work</h2>
           <p className="text-muted-foreground text-sm leading-relaxed">
             We build in the open with weekly demos and fast feedback loops.
           </p>
@@ -44,7 +44,7 @@ export default function Process() {
           className="grid gap-4 md:grid-cols-3"
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.2, margin: "-100px" }}
+          viewport={{ once: true, amount: 0.2, margin: '-100px' }}
           variants={containerVariants}
         >
           <motion.div variants={cardVariants}>
@@ -54,7 +54,7 @@ export default function Process() {
               description="We start with your business goals and user needs. Bring your design direction and we'll execute it, or we'll handle design and development together."
             />
           </motion.div>
-          
+
           <motion.div variants={cardVariants} className="md:mt-12">
             <ProcessCard
               number="02"
@@ -62,7 +62,7 @@ export default function Process() {
               description="Weekly demos and iterative builds covering code, design and motion. Fast feedback loops mean fewer wrong turns."
             />
           </motion.div>
-          
+
           <motion.div variants={cardVariants} className="md:mt-24">
             <ProcessCard
               number="03"

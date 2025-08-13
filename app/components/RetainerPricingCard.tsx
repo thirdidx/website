@@ -78,7 +78,7 @@ export default function RetainerPricingCard({ className = '' }: { className?: st
         </div>
 
         <div className="mb-4 flex items-center justify-between">
-          <h3 className="font-semibold">Monthly Retainer</h3>
+          <h3 className="font-mono text-2xl text-balance md:text-3xl">Monthly Retainer</h3>
           <div className="flex items-center gap-2">
             <Popover>
               <PopoverTrigger asChild>
@@ -88,13 +88,17 @@ export default function RetainerPricingCard({ className = '' }: { className?: st
               </PopoverTrigger>
               <PopoverContent className="w-80">
                 <div className="space-y-3">
-                  <h4 className="text-sm font-semibold">{plan.name} Retainer</h4>
-                  <p className="text-muted-foreground text-xs">{plan.description}</p>
-                  <ul className="text-muted-foreground space-y-1 text-xs">
+                  <h4 className="font-mono text-2xl font-medium text-balance md:text-3xl">
+                    {plan.name} Retainer
+                  </h4>
+                  <p className="text-muted-foreground font-mono text-xs text-balance">
+                    {plan.description}
+                  </p>
+                  <ul className="text-muted-foreground space-y-1 font-mono text-xs">
                     {plan.features.map((feature, index) => (
                       <li key={index} className="flex items-start gap-2">
                         <div className="bg-muted-foreground mt-2 h-1 w-1 flex-shrink-0 rounded-full"></div>
-                        <span>{feature}</span>
+                        <span className="text-balance">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -128,7 +132,7 @@ export default function RetainerPricingCard({ className = '' }: { className?: st
                 e.stopPropagation();
                 setSelectedPlan(key as 'starter' | 'growth' | 'scale');
               }}
-              className={`relative z-10 flex-1 rounded px-2 py-1 text-xs font-medium transition-colors duration-300 ${
+              className={`relative z-10 flex-1 rounded px-2 py-1 font-mono text-xs font-medium transition-colors duration-300 ${
                 selectedPlan === key
                   ? 'text-background'
                   : 'text-muted-foreground hover:text-foreground'
@@ -141,8 +145,12 @@ export default function RetainerPricingCard({ className = '' }: { className?: st
 
         {/* Plan Details */}
         <div className="flex-1">
-          <div className="mb-1 text-xl font-bold">{plan.price}</div>
-          <div className="text-muted-foreground mb-2 text-sm">{plan.hours}</div>
+          <div className="mb-1 font-mono text-2xl font-medium text-balance md:text-3xl">
+            {plan.price}
+          </div>
+          <div className="text-muted-foreground mb-2 font-mono text-sm text-balance">
+            {plan.hours}
+          </div>
           <p className="text-muted-foreground text-xs">{plan.description}</p>
         </div>
 
@@ -153,7 +161,7 @@ export default function RetainerPricingCard({ className = '' }: { className?: st
               href={plan.paymentUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="pointer-events-auto inline-flex items-center gap-2 bg-foreground text-background px-4 py-2 text-xs font-medium hover:bg-foreground/90 transition-colors no-underline"
+              className="bg-foreground text-background hover:bg-foreground/90 pointer-events-auto inline-flex items-center gap-2 px-4 py-2 font-mono text-xs font-medium no-underline transition-colors"
             >
               <CreditCardIcon className="h-3 w-3" />
               Buy now

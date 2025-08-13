@@ -25,7 +25,7 @@ export default function MeetingPage() {
       {/* Main Content */}
       <main className="container mx-auto max-w-6xl px-6 pt-32 pb-16 md:px-8">
         <div className="mb-12 text-center">
-          <h1 className="mb-4 text-4xl font-bold md:text-6xl lg:text-7xl">Schedule a call</h1>
+          <h1 className="mb-4 text-4xl md:text-6xl">Schedule a call</h1>
           <p className="text-muted-foreground mx-auto text-lg md:text-xl">
             Let's discuss your project. Book a 15-minute discovery call to explore how we can help.
           </p>

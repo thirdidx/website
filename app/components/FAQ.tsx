@@ -14,7 +14,7 @@ interface FAQItemProps {
 function FAQItem({ value, question, answer }: FAQItemProps) {
   return (
     <AccordionItem value={value}>
-      <AccordionTrigger className="text-left font-display text-xl">{question}</AccordionTrigger>
+      <AccordionTrigger className="font-display text-left text-xl">{question}</AccordionTrigger>
       <AccordionContent className="text-muted-foreground pr-4 font-mono text-sm">
         {answer}
       </AccordionContent>
@@ -25,9 +25,9 @@ function FAQItem({ value, question, answer }: FAQItemProps) {
 export default function FAQ() {
   return (
     <section id="faq" className="py-32 md:py-40">
-      <div className="container mx-auto px-4 max-w-7xl">
+      <div className="container mx-auto max-w-7xl px-4">
         <div className="mb-8 text-center">
-          <h2 className="mb-4 text-2xl font-bold">FAQ</h2>
+          <h2 className="mb-4 text-2xl md:text-4xl">FAQ</h2>
           <p className="text-muted-foreground mx-auto max-w-lg text-sm leading-relaxed">
             Quick answers to common questions. Don't see yours? Just ask.
           </p>

@@ -74,7 +74,7 @@ export default function ContactPage() {
       {/* Main Content */}
       <main className="container mx-auto max-w-4xl px-6 pt-32 pb-16 md:px-8">
         <div className="mb-12">
-          <h1 className="mb-4 text-4xl font-bold md:text-6xl lg:text-7xl">Let's talk</h1>
+          <h1 className="mb-4 text-4xl md:text-6xl">Let's talk</h1>
           <p className="text-muted-foreground text-lg md:text-xl">
             Tell us about your project and we'll get back to you within 24 hours.
           </p>
