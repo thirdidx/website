@@ -22,7 +22,9 @@
   --color-error: #ef4444;
 
   /* Typography */
-  --font-mono: var(--font-inconsolata);
+  --font-mono: var(--font-space-mono);
+  --font-sans: var(--font-work-sans);
+  --font-display: var(--font-saol-display);
 
   --text-xs: 0.625rem;
   --text-sm: 0.75rem;
@@ -108,7 +110,7 @@
   }
 
   body {
-    @apply text-foreground bg-primary font-mono leading-tight tracking-wide antialiased;
+    @apply bg-primary font-mono leading-tight text-white antialiased;
   }
 
   h1,
@@ -117,7 +119,7 @@
   h4,
   h5,
   h6 {
-    @apply font-mono font-bold uppercase;
+    @apply font-sans text-xl font-medium tracking-tight;
   }
 
   .btn {

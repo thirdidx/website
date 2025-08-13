@@ -1,25 +1,22 @@
 import PricingCard from './PricingCard';
+import RetainerPricingCard from './RetainerPricingCard';
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="flex min-h-screen items-center py-16 md:py-32">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-12">
-          <div className="col-span-12 flex flex-col gap-y-4 md:col-span-4">
-            <div>
-              <h2 className="mb-6 text-2xl font-bold">Pricing &amp; Engagement</h2>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                Have an idea? Let's scope it out.
-              </p>
-            </div>
-            <a href="#contact" className="text-xs font-semibold uppercase">
-              Get in Touch
-            </a>
-          </div>
+    <section id="pricing" className="py-32 md:py-40">
+      <div className="container mx-auto px-4 max-w-7xl">
+        <div className="mb-12 text-center">
+          <h2 className="mb-4 text-2xl font-bold">Pricing &amp; Engagement</h2>
+          <p className="text-muted-foreground text-sm leading-relaxed">
+            Have an idea? Let's scope it out.
+          </p>
+          <a href="#contact" className="mt-4 inline-block text-xs font-semibold uppercase">
+            Get in Touch
+          </a>
+        </div>
 
-          {/* Bento-style pricing grid */}
-          <div className="col-span-12 md:col-span-8">
-            <div className="grid gap-4 md:grid-cols-6 md:grid-rows-3">
+        {/* Bento-style pricing grid */}
+        <div className="grid gap-4 md:grid-cols-6 md:grid-rows-3">
               <PricingCard
                 title="Web Applications"
                 price="$12k–$35k | 6-10 weeks"
@@ -36,21 +33,7 @@ export default function Pricing() {
                 className="md:col-span-3"
               />
 
-              <PricingCard
-                title="Monthly Retainer"
-                price="$5,500/month | ~25 hours"
-                paymentUrl="https://buy.stripe.com/3cI6oH37k7EMeJq9LK0Ba03"
-                description="Ongoing development & optimization"
-                features={[
-                  'Includes ~25 hours/month of dedicated development',
-                  'Feature development & technical improvements',
-                  'Design system maintenance & updates',
-                  'Code reviews & architecture guidance',
-                  'Performance monitoring & optimization',
-                  'Security updates & maintenance',
-                  'Priority support & weekly planning calls',
-                  'Perfect for post-launch iteration and growth',
-                ]}
+              <RetainerPricingCard
                 className="md:col-span-3 md:row-span-2"
               />
 
@@ -86,7 +69,7 @@ export default function Pricing() {
 
               <PricingCard
                 title="Technical Consulting"
-                price="$225/hour"
+                price="$175/hour"
                 description="Architecture reviews & guidance"
                 features={[
                   'Frontend architecture & development',
@@ -104,8 +87,6 @@ export default function Pricing() {
                 features={['Significantly reduced costs + 2-5% equity for long-term partnership']}
                 className="md:col-span-2"
               />
-            </div>
-          </div>
         </div>
       </div>
     </section>
