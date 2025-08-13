@@ -1,22 +1,8 @@
-'use client';
-
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
-import { useEffect } from 'react';
+import CalEmbed from '../components/CalEmbed';
 
 export default function MeetingPage() {
-  useEffect(() => {
-    // Load Calendly widget script
-    const script = document.createElement('script');
-    script.src = 'https://assets.calendly.com/assets/external/widget.js';
-    script.async = true;
-    document.body.appendChild(script);
-
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
-
   return (
     <div className="bg-background text-foreground min-h-screen">
       {/* Header */}
@@ -45,20 +31,13 @@ export default function MeetingPage() {
           </p>
         </div>
 
-        {/* Calendly Embed */}
-        <div className="bg-muted/5 border-foreground/10 overflow-hidden rounded-lg border">
-          <div
-            className="calendly-inline-widget"
-            data-url="https://cal.com/thirdindex/15min?hide_event_type_details=1&hide_gdpr_banner=1"
-            style={{ minWidth: '320px', height: '700px' }}
-          />
-        </div>
+        <CalEmbed />
 
         {/* Alternative booking info */}
         <div className="mt-12 text-center">
           <p className="text-muted-foreground">
             Prefer email?{' '}
-            <Link href="/contact" className="text-foreground underline hover:no-underline">
+            <Link href="/contact" className="text-foreground underline">
               Send us a message
             </Link>
           </p>

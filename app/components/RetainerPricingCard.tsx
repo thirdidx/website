@@ -80,25 +80,6 @@ export default function RetainerPricingCard({ className = '' }: { className?: st
         <div className="mb-4 flex items-center justify-between">
           <h3 className="font-semibold">Monthly Retainer</h3>
           <div className="flex items-center gap-2">
-            {plan.paymentUrl && (
-              <TooltipProvider>
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <a
-                      href={plan.paymentUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:bg-muted/20 pointer-events-auto rounded-full p-1 transition-colors"
-                    >
-                      <CreditCardIcon className="text-muted-foreground h-4 w-4" />
-                    </a>
-                  </TooltipTrigger>
-                  <TooltipContent>
-                    <p>Pay securely via Stripe</p>
-                  </TooltipContent>
-                </Tooltip>
-              </TooltipProvider>
-            )}
             <Popover>
               <PopoverTrigger asChild>
                 <button className="hover:bg-muted/20 pointer-events-auto rounded-full p-1 transition-colors">
@@ -164,6 +145,21 @@ export default function RetainerPricingCard({ className = '' }: { className?: st
           <div className="text-muted-foreground mb-2 text-sm">{plan.hours}</div>
           <p className="text-muted-foreground text-xs">{plan.description}</p>
         </div>
+
+        {/* CTA Button at bottom */}
+        {plan.paymentUrl && (
+          <div className="mt-4 pt-4">
+            <a
+              href={plan.paymentUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="pointer-events-auto inline-flex items-center gap-2 bg-foreground text-background px-4 py-2 text-xs font-medium hover:bg-foreground/90 transition-colors no-underline"
+            >
+              <CreditCardIcon className="h-3 w-3" />
+              Buy now
+            </a>
+          </div>
+        )}
       </div>
     </div>
   );

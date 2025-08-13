@@ -42,25 +42,6 @@ export default function PricingCard({
         <div className="flex items-center justify-between mb-2">
           <h3 className="font-semibold">{title}</h3>
           <div className="flex items-center gap-2">
-            {paymentUrl && (
-              <TooltipProvider>
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <a
-                      href={paymentUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="pointer-events-auto p-1 hover:bg-muted/20 rounded-full transition-colors"
-                    >
-                      <CreditCardIcon className="h-4 w-4 text-muted-foreground" />
-                    </a>
-                  </TooltipTrigger>
-                  <TooltipContent>
-                    <p>Pay securely via Stripe</p>
-                  </TooltipContent>
-                </Tooltip>
-              </TooltipProvider>
-            )}
             <Popover>
               <PopoverTrigger asChild>
                 <button className="pointer-events-auto p-1 hover:bg-muted/20 rounded-full transition-colors">
@@ -88,13 +69,31 @@ export default function PricingCard({
             </Popover>
           </div>
         </div>
-        <div className="font-bold text-xl">
-          {price}
+        
+        <div className="flex-1">
+          <div className="font-bold text-xl">
+            {price}
+          </div>
+          {description && (
+            <p className="text-muted-foreground mt-2 text-xs">
+              {description}
+            </p>
+          )}
         </div>
-        {description && (
-          <p className="text-muted-foreground mt-2 text-xs">
-            {description}
-          </p>
+
+        {/* CTA Button at bottom */}
+        {paymentUrl && (
+          <div className="mt-4 pt-4">
+            <a
+              href={paymentUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="pointer-events-auto inline-flex items-center gap-2 bg-foreground text-background px-4 py-2 text-xs font-medium hover:bg-foreground/90 transition-colors no-underline"
+            >
+              <CreditCardIcon className="h-3 w-3" />
+              Buy now
+            </a>
+          </div>
         )}
       </div>
     </div>
