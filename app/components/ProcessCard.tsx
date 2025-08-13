@@ -1,6 +1,5 @@
 'use client';
 
-
 interface ProcessCardProps {
   number: string;
   title: string;
@@ -8,10 +7,15 @@ interface ProcessCardProps {
   className?: string;
 }
 
-export default function ProcessCard({ number, title, description, className = '' }: ProcessCardProps) {
+export default function ProcessCard({
+  number,
+  title,
+  description,
+  className = '',
+}: ProcessCardProps) {
   return (
-    <div className={`group cursor-pointer h-full ${className}`}>
-      <div className="border-foreground/20 bg-muted/5 group-hover:bg-muted/10 relative border p-6 transition-all duration-300 h-full flex flex-col">
+    <div className={`group h-full cursor-pointer ${className}`}>
+      <div className="border-foreground/20 bg-muted/5 group-hover:bg-muted/10 relative flex h-full flex-col border p-6 transition-all duration-300">
         {/* Corner caps that elevate outward on hover */}
         <div className="pointer-events-none absolute inset-0">
           {/* Top left corner cap */}
@@ -31,11 +35,9 @@ export default function ProcessCard({ number, title, description, className = ''
           <div className="bg-primary text-background rounded px-2 py-1 font-mono text-xs">
             {number}
           </div>
-          <h3 className="font-semibold">{title}</h3>
+          <div className="text-xl font-semibold">{title}</div>
         </div>
-        <p className="text-muted-foreground text-sm leading-relaxed">
-          {description}
-        </p>
+        <p className="text-muted-foreground text-sm leading-relaxed">{description}</p>
       </div>
     </div>
   );

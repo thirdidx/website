@@ -2,7 +2,6 @@
 
 import { InfoIcon, CreditCardIcon } from 'lucide-react';
 import { Popover, PopoverContent, PopoverTrigger } from '../../components/ui/popover';
-import { Tooltip, TooltipContent, TooltipTrigger, TooltipProvider } from '../../components/ui/tooltip';
 
 interface PricingCardProps {
   title: string;
@@ -13,17 +12,17 @@ interface PricingCardProps {
   paymentUrl?: string;
 }
 
-export default function PricingCard({ 
-  title, 
-  price, 
-  description, 
-  features, 
+export default function PricingCard({
+  title,
+  price,
+  description,
+  features,
   className = '',
-  paymentUrl
+  paymentUrl,
 }: PricingCardProps) {
   return (
-    <div className={`group cursor-pointer h-full ${className}`}>
-      <div className="border-foreground/20 bg-muted/5 group-hover:bg-muted/10 relative border p-6 transition-all duration-300 h-full flex flex-col">
+    <div className={`group h-full cursor-pointer ${className}`}>
+      <div className="border-foreground/20 bg-muted/5 group-hover:bg-muted/10 relative flex h-full flex-col border p-6 transition-all duration-300">
         {/* Corner caps that elevate outward on hover */}
         <div className="pointer-events-none absolute inset-0">
           {/* Top left corner cap */}
@@ -39,47 +38,28 @@ export default function PricingCard({
           <div className="border-foreground/90 absolute right-0 bottom-0 h-2 w-2 translate-x-px translate-y-px border-r border-b transition-all duration-300 group-hover:translate-x-1 group-hover:translate-y-1"></div>
         </div>
 
-        <div className="flex items-center justify-between mb-2">
-          <h3 className="font-semibold">{title}</h3>
+        <div className="mb-2 flex items-center justify-between">
+          <h3 className="font-mono text-2xl text-balance">{title}</h3>
           <div className="flex items-center gap-2">
-            {paymentUrl && (
-              <TooltipProvider>
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <a
-                      href={paymentUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="pointer-events-auto p-1 hover:bg-muted/20 rounded-full transition-colors"
-                    >
-                      <CreditCardIcon className="h-4 w-4 text-muted-foreground" />
-                    </a>
-                  </TooltipTrigger>
-                  <TooltipContent>
-                    <p>Pay securely via Stripe</p>
-                  </TooltipContent>
-                </Tooltip>
-              </TooltipProvider>
-            )}
             <Popover>
               <PopoverTrigger asChild>
-                <button className="pointer-events-auto p-1 hover:bg-muted/20 rounded-full transition-colors">
-                  <InfoIcon className="h-4 w-4 text-muted-foreground" />
+                <button className="hover:bg-muted/20 pointer-events-auto rounded-full p-1 transition-colors">
+                  <InfoIcon className="text-muted-foreground h-4 w-4" />
                 </button>
               </PopoverTrigger>
               <PopoverContent className="w-80">
                 <div className="space-y-3">
-                  <h4 className="font-semibold text-sm">{title}</h4>
+                  <h4 className="font-mono text-xl text-balance md:text-2xl">{title}</h4>
                   {description && (
-                    <p className="text-muted-foreground text-xs">
+                    <p className="text-muted-foreground font-mono text-xs text-balance">
                       {description}
                     </p>
                   )}
-                  <ul className="text-muted-foreground space-y-1 text-xs">
+                  <ul className="text-muted-foreground space-y-1 font-mono text-xs">
                     {features.map((feature, index) => (
                       <li key={index} className="flex items-start gap-2">
-                        <div className="bg-muted-foreground h-1 w-1 rounded-full mt-2 flex-shrink-0"></div>
-                        <span>{feature}</span>
+                        <div className="bg-muted-foreground mt-2 h-1 w-1 flex-shrink-0 rounded-full"></div>
+                        <span className="text-balance">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -88,13 +68,29 @@ export default function PricingCard({
             </Popover>
           </div>
         </div>
-        <div className="font-bold text-xl">
-          {price}
+
+        <div className="flex-1">
+          <div className="font-mono text-xl text-balance">{price}</div>
+          {description && (
+            <p className="text-muted-foreground mt-2 font-mono text-xs text-balance">
+              {description}
+            </p>
+          )}
         </div>
-        {description && (
-          <p className="text-muted-foreground mt-2 text-xs">
-            {description}
-          </p>
+
+        {/* CTA Button at bottom */}
+        {paymentUrl && (
+          <div className="mt-4 pt-4">
+            <a
+              href={paymentUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-foreground text-background hover:bg-foreground/90 pointer-events-auto inline-flex items-center gap-2 px-4 py-2 font-mono text-xs font-medium no-underline transition-colors"
+            >
+              <CreditCardIcon className="h-3 w-3" />
+              Buy now
+            </a>
+          </div>
         )}
       </div>
     </div>
