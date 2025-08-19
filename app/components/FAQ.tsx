@@ -8,7 +8,7 @@ import {
 interface FAQItemProps {
   value: string;
   question: string;
-  answer: string;
+  answer: string | React.ReactNode;
 }
 
 function FAQItem({ value, question, answer }: FAQItemProps) {
@@ -64,6 +64,25 @@ export default function FAQ() {
               value="item-6"
               question="What's in the strategy session?"
               answer="Technical feasibility analysis, architecture planning, timeline estimation, and tech stack recommendations."
+            />
+            <FAQItem
+              value="item-7"
+              question="Who's behind thirdindex?"
+              answer={
+                <>
+                  The studio is led by Michael Ciccarelli — designer, developer, and builder of
+                  systems. More at{' '}
+                  <a
+                    href="https://m1ke.xyz"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-foreground underline transition-colors"
+                  >
+                    m1ke.xyz
+                  </a>
+                  .
+                </>
+              }
             />
           </Accordion>
         </div>
