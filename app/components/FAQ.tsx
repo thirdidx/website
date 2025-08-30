@@ -70,15 +70,15 @@ export default function FAQ() {
               question="Who's behind thirdindex?"
               answer={
                 <>
-                  The studio is led by Michael Ciccarelli — designer, developer, and builder of
-                  systems. More at{' '}
+                  Michael Ciccarelli leads the studio. He's a software engineer and designer with
+                  20+ years building for the web. More at{' '}
                   <a
-                    href="https://m1ke.xyz"
+                    href="https://hael.cc"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-foreground underline transition-colors"
                   >
-                    m1ke.xyz
+                    hael.cc
                   </a>
                   .
                 </>
