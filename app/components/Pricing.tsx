@@ -2,14 +2,28 @@
 
 import InquiryModal from './InquiryModal';
 
+/**
+ * Pricing component displays three service offerings in a responsive grid
+ * 
+ * Features:
+ * - Three service tiers: web applications, marketing sites, development retainer
+ * - Interactive cards with hover effects and corner animations
+ * - Integrated inquiry modals for each service
+ * - Responsive 3-column grid layout
+ * - Detailed feature lists and pricing information
+ */
+
+/**
+ * Main Pricing component that renders the services section
+ */
 export default function Pricing() {
   return (
     <section id="pricing" className="py-32 md:py-40">
       <div className="container mx-auto max-w-7xl px-4">
         <div className="mb-12 text-center">
-          <h2 className="mb-4 font-mono text-2xl text-balance md:text-4xl">Our Services</h2>
+          <h2 className="mb-4 font-mono text-2xl text-balance md:text-4xl">our services</h2>
           <p className="text-muted-foreground font-mono text-sm leading-relaxed text-balance">
-            Full-stack development and design services for modern web applications
+            full-stack development and design services for modern web applications
           </p>
         </div>
 
@@ -26,34 +40,34 @@ export default function Pricing() {
                 <div className="border-foreground/90 absolute right-0 bottom-0 h-2 w-2 translate-x-px translate-y-px border-r border-b transition-all duration-300 group-hover:translate-x-1 group-hover:translate-y-1"></div>
               </div>
 
-              <h3 className="mb-2 font-mono text-2xl">Web Applications</h3>
+              <h3 className="mb-2 font-mono text-2xl">web applications</h3>
               <div className="mb-4 font-mono text-3xl">$12k+</div>
               <p className="text-muted-foreground mb-6 flex-1 font-mono text-xs">
-                Complete product development from concept to production. Modern web applications
+                complete product development from concept to production. modern web applications
                 built with scalable architecture and intuitive user experiences.
               </p>
               <ul className="text-muted-foreground mb-8 space-y-2 font-mono text-xs">
                 <li className="flex items-start gap-2">
                   <div className="bg-muted-foreground mt-1.5 h-1 w-1 flex-shrink-0 rounded-full"></div>
-                  <span>Full-stack development</span>
+                  <span>full-stack development</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <div className="bg-muted-foreground mt-1.5 h-1 w-1 flex-shrink-0 rounded-full"></div>
-                  <span>Database design & API development</span>
+                  <span>database design & api development</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <div className="bg-muted-foreground mt-1.5 h-1 w-1 flex-shrink-0 rounded-full"></div>
-                  <span>UI/UX design & prototyping</span>
+                  <span>ui/ux design & prototyping</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <div className="bg-muted-foreground mt-1.5 h-1 w-1 flex-shrink-0 rounded-full"></div>
-                  <span>Testing, deployment & hosting setup</span>
+                  <span>testing, deployment & hosting setup</span>
                 </li>
               </ul>
               <InquiryModal
-                title="Web Applications"
+                title="web applications"
                 price="$12k+"
-                description="Tell us about your web application project"
+                description="tell us about your web application project"
               />
             </div>
           </div>
@@ -69,34 +83,34 @@ export default function Pricing() {
                 <div className="border-foreground/90 absolute right-0 bottom-0 h-2 w-2 translate-x-px translate-y-px border-r border-b transition-all duration-300 group-hover:translate-x-1 group-hover:translate-y-1"></div>
               </div>
 
-              <h3 className="mb-2 font-mono text-2xl">Marketing Sites</h3>
+              <h3 className="mb-2 font-mono text-2xl">marketing sites</h3>
               <div className="mb-4 font-mono text-3xl">$5k+</div>
               <p className="text-muted-foreground mb-6 flex-1 font-mono text-xs">
-                High-performance websites and landing pages built for conversion. Modern frameworks
+                high-performance websites and landing pages built for conversion. modern frameworks
                 with content management integration.
               </p>
               <ul className="text-muted-foreground mb-8 space-y-2 font-mono text-xs">
                 <li className="flex items-start gap-2">
                   <div className="bg-muted-foreground mt-1.5 h-1 w-1 flex-shrink-0 rounded-full"></div>
-                  <span>Responsive design & development</span>
+                  <span>responsive design & development</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <div className="bg-muted-foreground mt-1.5 h-1 w-1 flex-shrink-0 rounded-full"></div>
-                  <span>CMS & API integration</span>
+                  <span>cms & api integration</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <div className="bg-muted-foreground mt-1.5 h-1 w-1 flex-shrink-0 rounded-full"></div>
-                  <span>SEO optimization & performance tuning</span>
+                  <span>seo optimization & performance tuning</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <div className="bg-muted-foreground mt-1.5 h-1 w-1 flex-shrink-0 rounded-full"></div>
-                  <span>Analytics setup & conversion tracking</span>
+                  <span>analytics setup & conversion tracking</span>
                 </li>
               </ul>
               <InquiryModal
-                title="Marketing Sites"
+                title="marketing sites"
                 price="$5k+"
-                description="Tell us about your marketing site needs"
+                description="tell us about your marketing site needs"
               />
             </div>
           </div>
@@ -112,34 +126,34 @@ export default function Pricing() {
                 <div className="border-foreground/90 absolute right-0 bottom-0 h-2 w-2 translate-x-px translate-y-px border-r border-b transition-all duration-300 group-hover:translate-x-1 group-hover:translate-y-1"></div>
               </div>
 
-              <h3 className="mb-2 font-mono text-2xl">Development Retainer</h3>
+              <h3 className="mb-2 font-mono text-2xl">development retainer</h3>
               <div className="mb-4 font-mono text-3xl">$10k+</div>
               <p className="text-muted-foreground mb-6 flex-1 font-mono text-xs">
-                Ongoing development partnership for continuous product evolution. Dedicated
+                ongoing development partnership for continuous product evolution. dedicated
                 technical resources for your growing needs.
               </p>
               <ul className="text-muted-foreground mb-8 space-y-2 font-mono text-xs">
                 <li className="flex items-start gap-2">
                   <div className="bg-muted-foreground mt-1.5 h-1 w-1 flex-shrink-0 rounded-full"></div>
-                  <span>Priority development & bug fixes</span>
+                  <span>priority development & bug fixes</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <div className="bg-muted-foreground mt-1.5 h-1 w-1 flex-shrink-0 rounded-full"></div>
-                  <span>Feature development & technical consulting</span>
+                  <span>feature development & technical consulting</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <div className="bg-muted-foreground mt-1.5 h-1 w-1 flex-shrink-0 rounded-full"></div>
-                  <span>Performance optimization & scaling</span>
+                  <span>performance optimization & scaling</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <div className="bg-muted-foreground mt-1.5 h-1 w-1 flex-shrink-0 rounded-full"></div>
-                  <span>Flexible monthly hour allocation</span>
+                  <span>flexible monthly hour allocation</span>
                 </li>
               </ul>
               <InquiryModal
-                title="Development Retainer"
+                title="development retainer"
                 price="$10k+/month"
-                description="Let's discuss your ongoing development needs"
+                description="let's discuss your ongoing development needs"
               />
             </div>
           </div>

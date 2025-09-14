@@ -11,11 +11,34 @@ import {
 } from '../../components/ui/dialog';
 import { ArrowRightIcon } from 'lucide-react';
 
+/**
+ * InquiryModal component provides a project inquiry form modal for service offerings
+ * 
+ * Features:
+ * - Comprehensive project form with budget, timeline, and requirements
+ * - Submits to /api/contact endpoint with type 'project'
+ * - Form validation and error handling
+ * - Resets form on successful submission
+ * - Pre-fills project type and budget from props
+ * - Configurable trigger button or custom children
+ * 
+ * @param title - Project type title (e.g., "web applications")
+ * @param price - Price range for the service
+ * @param description - Optional description for the modal
+ * @param className - Optional CSS classes for styling
+ * @param children - Custom trigger element (defaults to "inquire" button)
+ */
+
 interface InquiryModalProps {
+  /** Project type title displayed in form */
   title: string;
+  /** Price range for the service */
   price: string;
+  /** Optional description text for the modal */
   description?: string;
+  /** Optional CSS classes for the trigger element */
   className?: string;
+  /** Custom trigger element - if not provided, uses default button */
   children?: React.ReactNode;
 }
 
@@ -84,7 +107,7 @@ export default function InquiryModal({
         {children || (
           <button className="bg-foreground text-background hover:bg-foreground/90 pointer-events-auto inline-flex items-center gap-2 px-4 py-2 font-mono text-xs font-medium no-underline transition-colors">
             <ArrowRightIcon className="h-3 w-3" />
-            Inquire
+            inquire
           </button>
         )}
       </DialogTrigger>
@@ -92,14 +115,14 @@ export default function InquiryModal({
         <DialogHeader>
           <DialogTitle className="font-mono text-xl">{title}</DialogTitle>
           <DialogDescription className="font-mono text-xs">
-            {description || "Tell us about your project and we'll get back to you within 24 hours."}
+            {description || "tell us about your project and we'll get back to you within 24 hours."}
           </DialogDescription>
         </DialogHeader>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="grid grid-cols-2 gap-4">
             <div>
               <label htmlFor="name" className="mb-1 block font-mono text-xs">
-                Name *
+                name *
               </label>
               <input
                 id="name"
@@ -112,7 +135,7 @@ export default function InquiryModal({
             </div>
             <div>
               <label htmlFor="email" className="mb-1 block font-mono text-xs">
-                Email *
+                email *
               </label>
               <input
                 id="email"
@@ -127,7 +150,7 @@ export default function InquiryModal({
 
           <div>
             <label htmlFor="company" className="mb-1 block font-mono text-xs">
-              Company
+              company
             </label>
             <input
               id="company"
@@ -141,7 +164,7 @@ export default function InquiryModal({
           <div className="grid grid-cols-2 gap-4">
             <div>
               <label htmlFor="budget" className="mb-1 block font-mono text-xs">
-                Budget
+                budget
               </label>
               <input
                 id="budget"
@@ -154,7 +177,7 @@ export default function InquiryModal({
             </div>
             <div>
               <label htmlFor="timeline" className="mb-1 block font-mono text-xs">
-                Timeline
+                timeline
               </label>
               <select
                 id="timeline"
@@ -162,19 +185,19 @@ export default function InquiryModal({
                 onChange={(e) => setFormData({ ...formData, timeline: e.target.value })}
                 className="border-foreground/20 focus:border-foreground w-full border bg-transparent px-3 py-2 font-mono text-xs focus:outline-none"
               >
-                <option value="">Select timeline</option>
-                <option value="ASAP">ASAP</option>
+                <option value="">select timeline</option>
+                <option value="ASAP">asap</option>
                 <option value="1-2 weeks">1-2 weeks</option>
                 <option value="1 month">1 month</option>
                 <option value="2-3 months">2-3 months</option>
-                <option value="Flexible">Flexible</option>
+                <option value="Flexible">flexible</option>
               </select>
             </div>
           </div>
 
           <div>
             <label htmlFor="message" className="mb-1 block font-mono text-xs">
-              Project Details *
+              project details *
             </label>
             <textarea
               id="message"
@@ -183,7 +206,7 @@ export default function InquiryModal({
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
               className="border-foreground/20 focus:border-foreground w-full resize-none border bg-transparent px-3 py-2 font-mono text-xs focus:outline-none"
-              placeholder="Tell us about your project, goals, and any specific requirements..."
+              placeholder="tell us about your project, goals, and any specific requirements..."
             />
           </div>
 
@@ -191,7 +214,7 @@ export default function InquiryModal({
             type="submit"
             className="bg-foreground text-background hover:bg-foreground/90 w-full px-4 py-2 font-mono text-xs font-medium transition-colors"
           >
-            Send Inquiry
+            send inquiry
           </button>
         </form>
       </DialogContent>

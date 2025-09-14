@@ -3,6 +3,19 @@
 import { motion } from 'framer-motion';
 import ProcessCard from './ProcessCard';
 
+/**
+ * Process component displays the development process in three animated steps
+ * 
+ * Features:
+ * - Three-step development process with staggered animations
+ * - Cards appear on scroll with custom easing
+ * - Responsive grid layout with vertical offset on larger screens
+ * - Uses Framer Motion for smooth scroll-triggered animations
+ */
+
+/**
+ * Main Process component that renders the development workflow section
+ */
 export default function Process() {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -33,9 +46,9 @@ export default function Process() {
     <section id="process" className="py-32 md:py-40">
       <div className="container mx-auto max-w-7xl px-4">
         <div className="mb-12 text-center">
-          <h2 className="font-mono mb-4 text-2xl md:text-4xl">Our Process</h2>
+          <h2 className="font-mono mb-4 text-2xl md:text-4xl">our process</h2>
           <p className="text-muted-foreground text-sm leading-relaxed">
-            Technical excellence meets collaborative execution. Transparent, iterative, results-focused.
+            technical excellence meets collaborative execution. transparent, iterative, results-focused.
           </p>
         </div>
 
@@ -50,24 +63,24 @@ export default function Process() {
           <motion.div variants={cardVariants}>
             <ProcessCard
               number="01"
-              title="Discovery & Planning"
-              description="We dive deep into your technical requirements, user needs, and business objectives. Clear project scope and technical architecture from day one."
+              title="discovery & planning"
+              description="we dive deep into your technical requirements, user needs, and business objectives. clear project scope and technical architecture from day one."
             />
           </motion.div>
 
           <motion.div variants={cardVariants} className="md:mt-12">
             <ProcessCard
               number="02"
-              title="Design & Development"
-              description="Iterative build cycles with regular check-ins. We design and code simultaneously, ensuring the final product matches your vision exactly."
+              title="design & development"
+              description="iterative build cycles with regular check-ins. we design and code simultaneously, ensuring the final product matches your vision exactly."
             />
           </motion.div>
 
           <motion.div variants={cardVariants} className="md:mt-24">
             <ProcessCard
               number="03"
-              title="Launch & Optimize"
-              description="Production deployment with performance monitoring. We ensure your application scales smoothly and provides ongoing technical support."
+              title="launch & optimize"
+              description="production deployment with performance monitoring. we ensure your application scales smoothly and provides ongoing technical support."
             />
           </motion.div>
         </motion.div>

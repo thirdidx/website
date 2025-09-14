@@ -3,11 +3,31 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 
+/**
+ * ScrollRevealText component animates text reveal on scroll with color transitions
+ * 
+ * Features:
+ * - Word-by-word color animation from gray to black
+ * - Scroll-triggered animation using Framer Motion
+ * - Supports HTML content with <em> tags for emphasis
+ * - Parses HTML to maintain formatting while animating
+ * - Configurable CSS classes for styling
+ * - Smooth color transitions based on scroll progress
+ * 
+ * @param text - Text content to animate (supports <em> HTML tags)
+ * @param className - CSS classes for styling
+ */
+
 interface ScrollRevealTextProps {
+  /** Text content to animate - supports <em> HTML tags for emphasis */
   text: string;
+  /** Optional CSS classes for styling */
   className?: string;
 }
 
+/**
+ * Main ScrollRevealText component that renders animated text with scroll-based color transitions
+ */
 export default function ScrollRevealText({ text, className = '' }: ScrollRevealTextProps) {
   const containerRef = useRef<HTMLHeadingElement>(null);
 
@@ -16,7 +36,9 @@ export default function ScrollRevealText({ text, className = '' }: ScrollRevealT
     offset: ['start 0.9', 'center center'],
   });
 
-  // Parse HTML string to extract text and tags
+  /**
+   * Parse HTML string to extract text content and preserve <em> tag information
+   */
   const parseHtmlString = (html: string) => {
     const parts: { text: string; isEm: boolean }[] = [];
     const regex = /<em>(.*?)<\/em>|([^<]+)/g;

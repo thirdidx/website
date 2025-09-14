@@ -1,5 +1,19 @@
 import Image from 'next/image';
 
+/**
+ * Hero component displays the main landing section with logo and tagline
+ * 
+ * Features:
+ * - Full-screen height with gradient background
+ * - Overlaid dithered background image with blend mode
+ * - Large SVG logo with custom wordmark
+ * - Responsive grid layout positioning logo and text
+ * - Clean, minimal design emphasizing the brand
+ */
+
+/**
+ * Main Hero component that renders the landing section
+ */
 export default function Hero() {
   return (
     <div
@@ -40,7 +54,7 @@ export default function Hero() {
         </div>
         <div className="col-span-12 flex flex-col justify-end gap-2 md:col-span-6 md:col-start-7 xl:col-span-3 xl:col-start-10">
           <p className="text-balance">
-            We design and develop web applications for companies that value quality execution. Clean
+            we design and develop web applications for companies that value quality execution. clean
             code, intuitive interfaces, measurable results.
           </p>
         </div>

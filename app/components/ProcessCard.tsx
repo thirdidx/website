@@ -1,44 +1,34 @@
-'use client';
-
+/**
+ * ProcessCard component displays a single step in the development process
+ * 
+ * Features:
+ * - Numbered card with title and description
+ * - Clean, minimal design with monospace typography
+ * - Responsive layout with proper spacing
+ * - Used within the Process component for workflow steps
+ * 
+ * @param number - Step number (e.g., "01", "02")
+ * @param title - Title of the process step
+ * @param description - Detailed description of the step
+ */
 interface ProcessCardProps {
+  /** Step number displayed prominently */
   number: string;
+  /** Title of the process step */
   title: string;
+  /** Detailed description of what happens in this step */
   description: string;
-  className?: string;
 }
 
-export default function ProcessCard({
-  number,
-  title,
-  description,
-  className = '',
-}: ProcessCardProps) {
+/**
+ * Main ProcessCard component that renders a single process step
+ */
+export default function ProcessCard({ number, title, description }: ProcessCardProps) {
   return (
-    <div className={`group h-full cursor-pointer ${className}`}>
-      <div className="border-foreground/20 bg-muted/5 group-hover:bg-muted/10 relative flex h-full flex-col border p-6 transition-all duration-300">
-        {/* Corner caps that elevate outward on hover */}
-        <div className="pointer-events-none absolute inset-0">
-          {/* Top left corner cap */}
-          <div className="border-foreground/90 absolute top-0 left-0 h-2 w-2 -translate-x-px -translate-y-px border-t border-l transition-all duration-300 group-hover:-translate-x-1 group-hover:-translate-y-1"></div>
-
-          {/* Top right corner cap */}
-          <div className="border-foreground/90 absolute top-0 right-0 h-2 w-2 translate-x-px -translate-y-px border-t border-r transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"></div>
-
-          {/* Bottom left corner cap */}
-          <div className="border-foreground/90 absolute bottom-0 left-0 h-2 w-2 -translate-x-px translate-y-px border-b border-l transition-all duration-300 group-hover:-translate-x-1 group-hover:translate-y-1"></div>
-
-          {/* Bottom right corner cap */}
-          <div className="border-foreground/90 absolute right-0 bottom-0 h-2 w-2 translate-x-px translate-y-px border-r border-b transition-all duration-300 group-hover:translate-x-1 group-hover:translate-y-1"></div>
-        </div>
-
-        <div className="mb-4 flex items-center gap-3">
-          <div className="bg-primary text-background rounded px-2 py-1 font-mono text-xs">
-            {number}
-          </div>
-          <div className="text-xl font-semibold">{title}</div>
-        </div>
-        <p className="text-muted-foreground text-sm leading-relaxed">{description}</p>
-      </div>
+    <div className="space-y-4">
+      <div className="font-mono text-sm opacity-50">{number}</div>
+      <h3 className="font-mono text-xl">{title}</h3>
+      <p className="text-muted-foreground text-sm leading-relaxed">{description}</p>
     </div>
   );
 }

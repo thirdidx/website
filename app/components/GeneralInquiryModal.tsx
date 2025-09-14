@@ -11,8 +11,24 @@ import {
 } from '../../components/ui/dialog';
 import { MessageCircleIcon } from 'lucide-react';
 
+/**
+ * GeneralInquiryModal component provides a contact form modal for general inquiries
+ * 
+ * Features:
+ * - Form with name, email, company, and message fields
+ * - Submits to /api/contact endpoint with type 'contact'
+ * - Form validation and error handling
+ * - Resets form on successful submission
+ * - Configurable trigger button or custom children
+ * 
+ * @param className - Optional CSS classes for styling
+ * @param children - Custom trigger element (defaults to "send message" button)
+ */
+
 interface GeneralInquiryModalProps {
+  /** Optional CSS classes for the trigger element */
   className?: string;
+  /** Custom trigger element - if not provided, uses default button */
   children?: React.ReactNode;
 }
 
@@ -69,22 +85,22 @@ export default function GeneralInquiryModal({
         {children || (
           <button className="border-foreground text-foreground hover:bg-foreground hover:text-background pointer-events-auto inline-flex items-center gap-2 border px-4 py-2 font-mono text-xs font-medium no-underline transition-colors">
             <MessageCircleIcon className="h-3 w-3" />
-            Send Message
+            send message
           </button>
         )}
       </DialogTrigger>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
-          <DialogTitle className="font-mono text-xl">Get in Touch</DialogTitle>
+          <DialogTitle className="font-mono text-xl">get in touch</DialogTitle>
           <DialogDescription className="font-mono text-xs">
-            Tell us about your project or ask any questions you have.
+            tell us about your project or ask any questions you have.
           </DialogDescription>
         </DialogHeader>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="grid grid-cols-2 gap-4">
             <div>
               <label htmlFor="name" className="mb-1 block font-mono text-xs">
-                Name *
+                name *
               </label>
               <input
                 id="name"
@@ -97,7 +113,7 @@ export default function GeneralInquiryModal({
             </div>
             <div>
               <label htmlFor="email" className="mb-1 block font-mono text-xs">
-                Email *
+                email *
               </label>
               <input
                 id="email"
@@ -112,7 +128,7 @@ export default function GeneralInquiryModal({
 
           <div>
             <label htmlFor="company" className="mb-1 block font-mono text-xs">
-              Company
+              company
             </label>
             <input
               id="company"
@@ -125,7 +141,7 @@ export default function GeneralInquiryModal({
 
           <div>
             <label htmlFor="message" className="mb-1 block font-mono text-xs">
-              Message *
+              message *
             </label>
             <textarea
               id="message"
@@ -134,7 +150,7 @@ export default function GeneralInquiryModal({
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
               className="border-foreground/20 focus:border-foreground w-full resize-none border bg-transparent px-3 py-2 font-mono text-xs focus:outline-none"
-              placeholder="Tell us about your project or ask any questions..."
+              placeholder="tell us about your project or ask any questions..."
             />
           </div>
 
@@ -142,7 +158,7 @@ export default function GeneralInquiryModal({
             type="submit"
             className="bg-foreground text-background hover:bg-foreground/90 w-full px-4 py-2 font-mono text-xs font-medium transition-colors"
           >
-            Send Message
+            send message
           </button>
         </form>
       </DialogContent>
