@@ -1,4 +1,7 @@
-import Link from 'next/link';
+'use client';
+
+import CalendarModal from './CalendarModal';
+import GeneralInquiryModal from './GeneralInquiryModal';
 
 export default function CTA() {
   return (
@@ -9,18 +12,8 @@ export default function CTA() {
           Let's discuss your project and see if we're a good fit.
         </p>
         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <Link
-            href="/meeting"
-            className="bg-foreground text-background hover:bg-primary focus:ring-primary inline-flex items-center justify-center rounded-full px-6 py-3 text-sm no-underline transition-colors focus:ring-2 focus:ring-offset-2 focus:outline-none"
-          >
-            Schedule a Call
-          </Link>
-          <Link
-            href="/contact"
-            className="border-foreground text-foreground hover:bg-primary hover:border-primary hover:text-background focus:ring-primary inline-flex items-center justify-center rounded-full border px-6 py-3 text-sm no-underline transition-colors focus:ring-2 focus:ring-offset-2 focus:outline-none"
-          >
-            Send Message
-          </Link>
+          <CalendarModal />
+          <GeneralInquiryModal />
         </div>
         <p className="text-muted-foreground mt-4 text-xs">
           Or email directly: <a href="mailto:info@thirdindex.co">info@thirdindex.co</a>

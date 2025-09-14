@@ -37,41 +37,65 @@ export default function FAQ() {
           <Accordion type="single" collapsible className="w-full">
             <FAQItem
               value="item-1"
-              question="How long do projects take?"
-              answer="Most web applications take 6-10 weeks. Marketing sites typically 3-5 weeks."
+              question="What's your development process?"
+              answer="We start with strategic discovery to understand your goals, then move into weekly sprints with regular demos. You'll see progress every week and can provide feedback throughout the build."
             />
             <FAQItem
               value="item-2"
-              question="Do you work with startups?"
-              answer="Yes, we specialize in early-stage companies needing technical leadership and rapid execution."
+              question="What technologies do you use?"
+              answer={
+                <>
+                  Frontend: React, Next.js, TypeScript, Tailwind CSS, Framer Motion, GSAP
+                  <br />
+                  Backend: Node.js, Python, PostgreSQL, Supabase, Redis
+                  <br />
+                  Design: Figma, Adobe Creative Suite, Photoshop, Lightroom
+                  <br />
+                  CMS: Sanity, Contentful, Strapi
+                  <br />
+                  E-commerce: Stripe, Shopify, BigCommerce
+                  <br />
+                  Infrastructure: Vercel, AWS, Docker, CI/CD
+                  <br />
+                  Analytics: Google Analytics, Mixpanel, PostHog
+                  <br />
+                  AI Tools: Claude Code, Midjourney, ChatGPT
+                  <br />
+                </>
+              }
             />
             <FAQItem
               value="item-3"
-              question="What's your tech stack?"
-              answer="React/Next.js, Node.js, modern databases, and best-in-class tools for each project's needs."
+              question="How do you handle project timelines and budgets?"
+              answer="Projects are scoped with fixed timelines and budgets upfront. Web apps typically take 6-10 weeks, marketing sites 3-5 weeks. We include a 20% buffer for scope adjustments and stick to our commitments."
             />
             <FAQItem
               value="item-4"
-              question="Do you handle ongoing maintenance?"
-              answer="Yes, through our monthly retainer program for continued development and optimization."
+              question="Do you provide ongoing support?"
+              answer="Yes, through monthly retainer agreements starting at $10k/month. This covers bug fixes, feature additions, performance optimization, and strategic consulting as your business grows."
             />
             <FAQItem
               value="item-5"
-              question="What's greenfield development?"
-              answer="Building new applications from scratch with modern architecture and no legacy constraints."
+              question="Can you work with our existing team?"
+              answer="Absolutely. We can integrate with your internal team, provide technical leadership, or work independently based on your preferences. We're experienced in collaborative environments."
             />
             <FAQItem
               value="item-6"
-              question="What's in the strategy session?"
-              answer="Technical feasibility analysis, architecture planning, timeline estimation, and tech stack recommendations."
+              question="What makes you different from other agencies?"
+              answer="We're not an agency—we're a strategic consultancy. This means deeper business understanding, technical leadership, and long-term partnerships rather than just project delivery."
             />
             <FAQItem
               value="item-7"
+              question="Do you handle design and development?"
+              answer="Yes, we offer full-service capability from strategy to design to development. We can also work with your existing designs or collaborate with your design team."
+            />
+            <FAQItem
+              value="item-8"
               question="Who's behind thirdindex?"
               answer={
                 <>
-                  Michael Ciccarelli leads the studio. He's a software engineer and designer with
-                  20+ years building for the web. More at{' '}
+                  Michael Ciccarelli leads the consultancy. He's a software engineer and designer
+                  with 20+ years building for the web, from startups to enterprise. More at{' '}
                   <a
                     href="https://hael.cc"
                     target="_blank"
