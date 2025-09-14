@@ -33,9 +33,9 @@ export default function Process() {
     <section id="process" className="py-32 md:py-40">
       <div className="container mx-auto max-w-7xl px-4">
         <div className="mb-12 text-center">
-          <h2 className="font-mono mb-4 text-2xl md:text-4xl">How We Work</h2>
+          <h2 className="font-mono mb-4 text-2xl md:text-4xl">Our Process</h2>
           <p className="text-muted-foreground text-sm leading-relaxed">
-            We build in the open with weekly demos and fast feedback loops.
+            Technical excellence meets collaborative execution. Transparent, iterative, results-focused.
           </p>
         </div>
 
@@ -51,15 +51,15 @@ export default function Process() {
             <ProcessCard
               number="01"
               title="Discovery & Planning"
-              description="We start with your business goals and user needs. Bring your design direction and we'll execute it, or we'll handle design and development together."
+              description="We dive deep into your technical requirements, user needs, and business objectives. Clear project scope and technical architecture from day one."
             />
           </motion.div>
 
           <motion.div variants={cardVariants} className="md:mt-12">
             <ProcessCard
               number="02"
-              title="Rapid Development"
-              description="Weekly demos and iterative builds covering code, design and motion. Fast feedback loops mean fewer wrong turns."
+              title="Design & Development"
+              description="Iterative build cycles with regular check-ins. We design and code simultaneously, ensuring the final product matches your vision exactly."
             />
           </motion.div>
 
@@ -67,7 +67,7 @@ export default function Process() {
             <ProcessCard
               number="03"
               title="Launch & Optimize"
-              description="Deployment, monitoring, and performance optimization. Your complete product launches right, not just fast."
+              description="Production deployment with performance monitoring. We ensure your application scales smoothly and provides ongoing technical support."
             />
           </motion.div>
         </motion.div>

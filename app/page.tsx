@@ -19,7 +19,7 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <ScrollRevealText
               className="font-display text-xl leading-tight text-balance md:text-4xl lg:text-6xl"
-              text="we're a digital studio and consultancy building modern web apps with <em>intuitive ui/ux</em>, seamless e-commerce and payments, and <em>motion-driven design</em>. our work spans <em>creative projects</em>, publishing platforms, blockchain, and performance-focused architecture—delivering <em>end-to-end solutions</em> that scale."
+              text="We build <em>modern web applications</em> and digital products that work. From early-stage startups to established companies, we handle the <em>technical implementation</em> so you can focus on growing your business. Our expertise spans <em>full-stack development</em>, user experience design, and <em>scalable architecture</em>."
             />
           </div>
         </section>

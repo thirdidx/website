@@ -40,8 +40,8 @@ export default function Hero() {
         </div>
         <div className="col-span-12 flex flex-col justify-end gap-2 md:col-span-6 md:col-start-7 xl:col-span-3 xl:col-start-10">
           <p className="text-balance">
-            we build web applications with clean code and thoughtful design. from MVPs to full
-            platforms.
+            We design and develop web applications for companies that value quality execution. Clean
+            code, intuitive interfaces, measurable results.
           </p>
         </div>
       </div>
